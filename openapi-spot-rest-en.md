@@ -222,8 +222,8 @@ Return field description:
 
 Name | Type | Description
 
----|---|---|---
-Symbol | string | currency pair name, such as BTC/USDT
+---|---|---
+symbol | string | currency pair name, such as BTC/USDT 
 baseAsset | string | pricing currency BTC
 quoteAsset | string | Trading Currency USDT
 pricePrecision | string | Price accuracy
@@ -313,15 +313,15 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/tradePair/one
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string |yes | currency pair name, such as BTC/USDT
+symbol | string |yes | currency pair name, such as BTC/USDT
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Symbol | string | currency pair name, such as BTC/USDT
+---|---|---
+symbol | string | currency pair name, such as BTC/USDT
 baseAsset | string | pricing currency BTC
 quoteAsset | string | Trading Currency USDT
 pricePrecision | string | Price accuracy
@@ -330,7 +330,7 @@ takerFeeRate | string | taker fee
 makerFeeRate | string | maker fee
 minAmount | string | Latest Lots
 priceFluctuation | string | Price fluctuation limit
-Site | string | own site
+site | string | own site
 
 ```
 Request:
@@ -373,17 +373,17 @@ HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
 ```
 
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string | yes | currency pair name, such as BTC/USDT
-Depth | string | No | Depth stall, values ​​are 5, 10, 50, 100. Default value 10
+symbol | string | yes | currency pair name, such as BTC/USDT
+depth | string | No | Depth stall, values ​​are 5, 10, 50, 100. Default value 10
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Asks | array | seller depth, [gear price, quantity]
-Bid | array | buyer depth, [gear price, quantity]
+---|---|---
+asks | array | seller depth, [gear price, quantity]
+bid | array | buyer depth, [gear price, quantity]
 
 
 ```
@@ -473,21 +473,21 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP GET /api/exchange/v2/market/ticker/one
 ```
 Request parameters: none
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string | yes | currency pair name, such as BTC/USDT
+symbol | string | yes | currency pair name, such as BTC/USDT
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Symbol | string | currency pair name, such as BTC/USDT
+---|---|---
+symbol | string | currency pair name, such as BTC/USDT
 latestPrice | string | Latest price
 bestAsk | string | Sell one price
 bestBid | string | Buy one price
-High24h | string | 24h highest price
-Low24h | string | 24h lowest price
-Volume24h | string | 24h volume
+high24h | string | 24h highest price
+low24h | string | 24h lowest price
+volume24h | string | 24h volume
 
 ```
 Request:
@@ -528,18 +528,18 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/trades
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string | yes | currency pair name, such as BTC/USDT
+symbol | string | yes | currency pair name, such as BTC/USDT
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Symbol | string | currency pair name
-Price | string | transaction price
-Volume | string |
-Direction | string | direction
+---|---|---
+symbol | string | currency pair name
+price | string | transaction price
+volume | string |
+direction | string | direction
 tradeTime | string | Transaction time
 
 ```
@@ -941,9 +941,9 @@ no
 
 Return result parameter
 Name | Type | Description
----|---|---|---
-Asset | string | asset name / abbreviation
-Available | string | available balance
+---|---|---
+asset | string | asset name
+available | string | available balance
 frozenBalance | string | Freeze balance
 totalBalance | string | total
 
@@ -1009,15 +1009,15 @@ HTTP GET /api/exchange/v2/account/one
 ```
 
 Request parameter
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Asset | string | yes | asset name/abbreviation, such as BTC
+asset | string | yes | asset name/abbreviation, such as BTC
 
 Return result parameter
 Name | Type | Description
----|---|---|---
-Asset | string | asset name / abbreviation
-Available | string | available balance
+---|---|---
+asset | string | asset name
+available | string | available balance
 frozenBalance | string | Freeze balance
 totalBalance | string | total, freeze + balance
 
@@ -1056,12 +1056,12 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP POST/api/exchange/v2/order/place
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string | yes | currency pair name, such as BTC/USDT, separated by "/"
-Direction | string | yes | direction, 1: buy 2: sell
-Price | string | yes | order price
-Quantity | string | yes | quantity
+symbol | string | yes | currency pair name, such as BTC/USDT
+direction | string | yes | direction, 1: buy 2: sell
+price | string | yes | order price
+quantity | string | yes | quantity
 clientId | string | no | user request id, transparently returned to the user
 
 
@@ -1072,7 +1072,7 @@ clientId | string | no | user request id, transparently returned to the user
 Return field description:
 
 Name | Type | Description
----|---|---|---
+---|---|---
 orderId | string | generated order id
 clientId | string | clientId requested by client
 
@@ -1113,7 +1113,7 @@ HTTP GET/api/exchange/v2/order/openOrders
 Request parameters:
 Name | Type | Required / Description
 ---|---|---|---
-Symbol | string | no | currency pair name, such as BTC/USDT
+symbol | string | no | currency pair name, such as BTC/USDT
 latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
 
 
@@ -1126,19 +1126,19 @@ Paging query, return 20 per page
 Return field description:
 
 Name | Type | Description
----|---|---|---
+---|---|---
 orderId | string | Order Id
 baseAsset | string | base currency, such as BTC
 quoteAsset | string | Trading currency, such as USDT
 orderDirection | string | direction
-Quantity | string | order quantity
-FillQuantity | string | Number of transactions
-Amount | string | order amount
+quantity | string | order quantity
+fillQuantity | string | Number of transactions
+amount | string | order amount
 filledAmount | string |
 avgPrice | string | Average price
 orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partialCancelled
 orderTime | string | Order time
-Fee | string | handling fee
+fee | string | handling fee
 
 
 ```
@@ -1217,9 +1217,9 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/closedOrders
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
-Symbol | string | no | currency pair name, such as BTC/USDT
+symbol | string | no | currency pair name, such as BTC/USDT
 latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
 
 ```
@@ -1236,8 +1236,8 @@ orderId | string | Order Id
 baseAsset | string | base currency, such as BTC
 quoteAsset | string | Trading currency, such as USDT
 orderDirection | string | direction
-Quantity | string | order quantity
-Amount | string | order amount
+quantity | string | order quantity
+amount | string | order amount
 filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate
@@ -1308,7 +1308,7 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP GET/api/exchange/v2/order/info
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
 orderId | string | yes | order ID
 
@@ -1321,8 +1321,8 @@ orderId | string | Order Id
 baseAsset | string | base currency, such as BTC
 quoteAsset | string | Trading currency, such as USDT
 orderDirection | string | Direction, 1: Buy 2: Buy
-Quantity | string | order quantity
-Amount | string | order amount
+quantity | string | order quantity
+amount | string | order amount
 filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate
@@ -1375,7 +1375,7 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/trade/fills
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
 orderId | string | yes | order ID
 
@@ -1383,12 +1383,12 @@ orderId | string | yes | order ID
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Price | string | transaction price
-Quantity | string | Number of transactions
-Amount | string | transaction amount
-Fee | string | handling fee
-Direction | string | direction
+---|---|---
+price | string | transaction price
+quantity | string | Number of transactions
+amount | string | transaction amount
+fee | string | handling fee
+direction | string | direction
 tradeTime | string | Order trading time, international time
 feeByConi | string | coni deduction
 
@@ -1461,15 +1461,15 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP POST /api/exchange/v2/order/cancel
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
 orderId | string | yes | order ID
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Data | string | Undo Order Id
+---|---|---
+data | string | Undo Order Id
 
 ```
 Request:
@@ -1501,15 +1501,15 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP POST /api/exchange/v2/order/batchCancel
 ```
 Request parameters:
-Name | Type | Required / Description
+Name | Type | Required | Description
 ---|---|---|---
 orderIds | list<string> | Yes | Order ID
 
 Return field description:
 
 Name | Type | Description
----|---|---|---
-Data | string | Undo Order Id
+---|---|---
+data | string | Undo Order Id
 
 ```
 Request:
