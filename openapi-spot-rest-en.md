@@ -1239,13 +1239,13 @@ Paging query, return 20 per page
 
 Return field description:
 
-Name | Type | Description  
----|---|---|---  
-orderId | string | Order Id  
-baseAsset | string | base currency, such as BTC  
-quoteAsset | string | Trading currency, such as USDT  
-orderDirection | string | direction  
-quantity | string | order quantity  
+Name | Type | Description
+---|---|---
+orderId | string | Order Id
+baseAsset | string | base currency, such as BTC
+quoteAsset | string | Trading currency, such as USDT
+orderDirection | string | direction
+quantity | string | order quantity
 amount | string | order amount
 filledAmount | string |
 takerFeeRate | string | taker rate
@@ -1316,7 +1316,8 @@ Order list query by user request,
 Speed ​​limit rule: 6 times / 1 second
 HTTP GET/api/exchange/v2/order/info
 ```
-Request parameters:  
+Request parameters: 
+
 Name | Type | Required | Description  
 ---|---|---|---  
 orderId | string | yes | order ID
@@ -1384,6 +1385,7 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/trade/fills
 ```
 Request parameters:
+
 Name | Type | Required | Description
 ---|---|---|---
 orderId | string | yes | order ID
@@ -1470,6 +1472,7 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP POST /api/exchange/v2/order/cancel
 ```
 Request parameters:
+
 Name | Type | Required | Description
 ---|---|---|---
 orderId | string | yes | order ID
