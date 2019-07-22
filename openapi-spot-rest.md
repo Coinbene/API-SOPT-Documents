@@ -1,6 +1,8 @@
 
 # coinbene-spot-rest 现货openapi rest接口说明
 
+[英文版本](https://github.com/Coinbene/API-SPOT-v2-Documents/blob/master/openapi-spot-rest-en.md)
+
 * [coinbene-spot-rest 现货openapi rest接口说明](#coinbene-spot-rest-现货openapi-rest接口说明)
 	* [基本信息](#基本信息)
       	* [访问限制](#访问限制)
