@@ -1102,447 +1102,450 @@ Response:
 ```
 
 
-
-
-
-
-### 私有接口-查询当前委托挂单列表
+### Private Interface - Query the current list of delegate orders
 
 ```
-按用户请求进行订单列表查询，
-限速规则：3次/1秒
+Order list query by user request,
+Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/openOrders
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-symbol      | string | 否 | 币对名称，如BTC/USDT
-latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，返回最新20条数据，按订单id倒排显示。获取最后一个订单id-1，取下一页数据
+Symbol | string | no | currency pair name, such as BTC/USDT
+latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
 
 
 ```
-说明：
-分页查询，每页返回20条
+Description:
+Paging query, return 20 per page
 ```
 
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
-orderDirection   | string | 方向
-quantity   | string | 订单数量
-filledQuantity   | string | 已成交数量
-amount   | string | 订单金额
-filledAmount   | string | 已成交金额
-avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partiallyCancelled
-orderTime   | string | 下单时间
-fee   | string | 手续费
+orderId | string | Order Id
+baseAsset | string | base currency, such as BTC
+quoteAsset | string | Trading currency, such as USDT
+orderDirection | string | direction
+Quantity | string | order quantity
+FillQuantity | string | Number of transactions
+Amount | string | order amount
+filledAmount | string |
+avgPrice | string | Average price
+orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partialCancelled
+orderTime | string | Order time
+Fee | string | handling fee
 
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT&pageNum=1&pageSize=3
+Url: http://domain/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT&pageNum=1&pageSize=3
 Method: GET
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: d06bb21d3f3ca13908e52bd9dd858b80e8a00d444e6fda8c2f8729bac5e20e6a
-	ACCESS-TIMESTAMP: 2019-06-13T03:09:23.235Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
-Body: 
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: d06bb21d3f3ca13908e52bd9dd858b80e8a00d444e6fda8c2f8729bac5e20e6a
+ACCESS-TIMESTAMP: 2019-06-13T03:09:23.235Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
+Body:
 preHash: 2019-06-13T03:09:23.235ZGET/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT
 
 
 Response:
 {
-  "code": 200, 
-  "data": [
-    {
-      "orderId": "1912119792282841088", 
-      "baseAsset": "BTC", 
-      "quoteAsset": "USDT", 
-      "orderDirection": "buy", 
-      "quantity": "53", 
-      "amount": "3426.45", 
-      "filledAmount": "0", 
-      "takerFeeRate": "0.001", 
-      "makerFeeRate": "0.001", 
-      "avgPrice": "0", 
-      "orderStatus": "Open", 
-      "orderTime": "2019-06-13T02:41:24.0Z", 
-      "totalFee": "0"
-    }, 
-    {
-      "orderId": "1911862608898764800", 
-      "baseAsset": "BTC", 
-      "quoteAsset": "USDT", 
-      "orderDirection": "buy", 
-      "quantity": "54", 
-      "amount": "3645", 
-      "filledAmount": "0", 
-      "takerFeeRate": "0.001", 
-      "makerFeeRate": "0.001", 
-      "avgPrice": "0", 
-      "orderStatus": "Open", 
-      "orderTime": "2019-06-12T09:39:27.0Z", 
-      "totalFee": "0"
-    }, 
-    {
-      "orderId": "1911862547074723840", 
-      "baseAsset": "BTC", 
-      "quoteAsset": "USDT", 
-      "orderDirection": "buy", 
-      "quantity": "15", 
-      "amount": "966.75", 
-      "filledAmount": "0", 
-      "takerFeeRate": "0.001", 
-      "makerFeeRate": "0.001", 
-      "avgPrice": "0", 
-      "orderStatus": "Open", 
-      "orderTime": "2019-06-12T09:39:12.0Z", 
-      "totalFee": "0"
-    }
-  ]
+  "code": 200,
+  "data": [
+    {
+      "orderId": "1912119792282841088",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "orderDirection": "buy",
+      "quantity": "53",
+      "amount": "3426.45",
+      "filledAmount": "0",
+      "takerFeeRate": "0.001",
+      "makerFeeRate": "0.001",
+      "avgPrice": "0",
+      "orderStatus": "Open",
+      "orderTime": "2019-06-13T02:41:24.0Z",
+      "totalFee": "0"
+    },
+    {
+      "orderId": "1911862608898764800",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "orderDirection": "buy",
+      "quantity": "54",
+      "amount": "3645",
+      "filledAmount": "0",
+      "takerFeeRate": "0.001",
+      "makerFeeRate": "0.001",
+      "avgPrice": "0",
+      "orderStatus": "Open",
+      "orderTime": "2019-06-12T09:39:27.0Z",
+      "totalFee": "0"
+    },
+    {
+      "orderId": "1911862547074723840",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "orderDirection": "buy",
+      "quantity": "15",
+      "amount": "966.75",
+      "filledAmount": "0",
+      "takerFeeRate": "0.001",
+      "makerFeeRate": "0.001",
+      "avgPrice": "0",
+      "orderStatus": "Open",
+      "orderTime": "2019-06-12T09:39:12.0Z",
+      "totalFee": "0"
+    }
+  ]
 }
 ```
 
-### 私有接口-查询历史委托单列表
+### Private Interface - Query History Order List
 
 ```
-按用户请求进行订单列表查询，
-限速规则：3次/1秒
+Order list query by user request,
+Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/closedOrders
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-symbol      | string | 否 | 币对名称，如BTC/USDT
-latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，返回最新20条数据，按订单id倒排显示。获取最后一个订单id-1，取下一页数据
+Symbol | string | no | currency pair name, such as BTC/USDT
+latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
 
 ```
-说明：
-分页查询，每页返回20条
+Description:
+Paging query, return 20 per page
 ```
 
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
-orderDirection   | string | 方向
-quantity   | string | 订单数量
-amount   | string | 订单金额
-filledAmount   | string | 已成交金额
-takerFeeRate   | string | taker费率
-makerFeeRate   | string | maker费率
-avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partially cancelled
-orderTime   | string | 下单时间
-totalFee   | string | 手续费
+orderId | string | Order Id
+baseAsset | string | base currency, such as BTC
+quoteAsset | string | Trading currency, such as USDT
+orderDirection | string | direction
+Quantity | string | order quantity
+Amount | string | order amount
+filledAmount | string |
+takerFeeRate | string | taker rate
+makerFeeRate | string | maker rate
+avgPrice | string | Average price
+orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
+orderTime | string | Order time
+totalFee | string | handling fee
 
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/closedOrders
+Url: http://domain/api/exchange/v2/order/closedOrders
 Method: GET
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: d0c6e8cfe818eb263e3860eb0d7261b588a8dc13ebaa5d0799bc2e154d49877b
-	ACCESS-TIMESTAMP: 2019-06-13T11:39:45.024Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
-Body: 
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: d0c6e8cfe818eb263e3860eb0d7261b588a8dc13ebaa5d0799bc2e154d49877b
+ACCESS-TIMESTAMP: 2019-06-13T11:39:45.024Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
+Body:
 preHash: 2019-06-13T11:39:45.024ZGET/api/exchange/v2/order/closedOrders
 
 Response:
 {
-  "code": 200, 
-  "data": [
-    {
-      "orderId": "1912131427156307968", 
-      "baseAsset": "BTC", 
-      "quoteAsset": "USDT", 
-      "orderDirection": "buy", 
-      "quantity": "63", 
-      "amount": "4205.25", 
-      "filledAmount": "3979.557", 
-      "takerFeeRate": "0.001", 
-      "makerFeeRate": "0.001", 
-      "avgPrice": "63.1675714285714285714286", 
-      "orderStatus": "Filled", 
-      "orderTime": "2019-06-13T03:27:38.0Z", 
-      "totalFee": "3.979557"
-    }, 
-    {
-      "orderId": "1911862608898764800", 
-      "baseAsset": "BTC", 
-      "quoteAsset": "USDT", 
-      "orderDirection": "sell", 
-      "quantity": "54", 
-      "amount": "3645", 
-      "filledAmount": "0", 
-      "takerFeeRate": "0.001", 
-      "makerFeeRate": "0.001", 
-      "avgPrice": "0", 
-      "orderStatus": "Cancelled", 
-      "orderTime": "2019-06-12T09:39:27.0Z", 
-      "totalFee": "0"
-    }
-  ]
+  "code": 200,
+  "data": [
+    {
+      "orderId": "1912131427156307968",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "orderDirection": "buy",
+      "quantity": "63",
+      "amount": "4205.25",
+      "filledAmount": "3979.557",
+      "takerFeeRate": "0.001",
+      "makerFeeRate": "0.001",
+      "avgPrice": "63.1675714285714285714286",
+      "orderStatus": "Filled",
+      "orderTime": "2019-06-13T03:27:38.0Z",
+      "totalFee": "3.979557"
+    },
+    {
+      "orderId": "1911862608898764800",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "orderDirection": "sell",
+      "quantity": "54",
+      "amount": "3645",
+      "filledAmount": "0",
+      "takerFeeRate": "0.001",
+      "makerFeeRate": "0.001",
+      "avgPrice": "0",
+      "orderStatus": "Cancelled",
+      "orderTime": "2019-06-12T09:39:27.0Z",
+      "totalFee": "0"
+    }
+  ]
 }
 ```
 
-### 私有接口-查询指定订单信息
+
+### Private Interface - Query specified order information
 
 ```
-按用户请求进行订单列表查询，
-限速规则：6次/1秒
+Order list query by user request,
+Speed ​​limit rule: 6 times / 1 second
 HTTP GET/api/exchange/v2/order/info
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-orderId      | string | 是 | 委托单ID
+orderId | string | yes | order ID
 
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
-orderDirection   | string | 方向，1：买 2：买
-quantity   | string | 订单数量
-amount   | string | 订单金额
-filledAmount   | string | 已成交金额
-takerFeeRate   | string | taker费率
-makerFeeRate   | string | maker费率
-avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partially cancelled
-orderTime   | string | 下单时间
-totalFee   | string | 手续费
+orderId | string | Order Id
+baseAsset | string | base currency, such as BTC
+quoteAsset | string | Trading currency, such as USDT
+orderDirection | string | Direction, 1: Buy 2: Buy
+Quantity | string | order quantity
+Amount | string | order amount
+filledAmount | string |
+takerFeeRate | string | taker rate
+makerFeeRate | string | maker rate
+avgPrice | string | Average price
+orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
+orderTime | string | Order time
+totalFee | string | handling fee
 
 ```
 Request:
 Url: http://127.0.0.1:8604/api/exchange/v2/order/info?orderId=1911862608898764800
 Method: GET
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: d7157f16ab942af83b27f9eb5532c9b41444aca040135c306255517407c319db
-	ACCESS-TIMESTAMP: 2019-06-12T09:49:09.004Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
-Body: 
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: d7157f16ab942af83b27f9eb5532c9b41444aca040135c306255517407c319db
+ACCESS-TIMESTAMP: 2019-06-12T09:49:09.004Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
+Body:
 preHash: 2019-06-12T09:49:09.004ZGET/api/exchange/v2/order/info?orderId=1911862608898764800
 
 Response:
 {
-  "code": 200, 
-  "data": {
-    "orderId": "1911862608898764800", 
-    "baseAsset": "BTC", 
-    "quoteAsset": "USDT", 
-    "orderDirection": "2", 
-    "quantity": "54", 
-    "amount": "3645", 
-    "filledAmount": "0", 
-    "takerFeeRate": "0.001", 
-    "makerFeeRate": "0.001", 
-    "orderStatus": "Cancelled", 
-    "orderTime": "2019-06-12T09:39:27.0Z", 
-    "totalFee": "0"
-  }
+  "code": 200,
+  "data": {
+    "orderId": "1911862608898764800",
+    "baseAsset": "BTC",
+    "quoteAsset": "USDT",
+    "orderDirection": "2",
+    "quantity": "54",
+    "amount": "3645",
+    "filledAmount": "0",
+    "takerFeeRate": "0.001",
+    "makerFeeRate": "0.001",
+    "orderStatus": "Cancelled",
+    "orderTime": "2019-06-12T09:39:27.0Z",
+    "totalFee": "0"
+  }
 }
 
 ```
 
 
-### 私有接口-查询订单成交明细列表
+### Private Interface - Query Order Transactions List
 
 ```
-按用户请求进行订单列表查询，
-限速规则：3次/1秒
+Order list query by user request,
+Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/trade/fills
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-orderId      | string | 是 | 委托单ID
+orderId | string | yes | order ID
 
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-price   | string | 交易价格
-quantity   | string | 交易数量
-amount   | string | 交易金额
-fee   | string | 手续费
-direction   | string | 方向
-tradeTime   | string | 订单交易时间，国际时间
-feeByConi   | string | coni抵扣手续
+Price | string | transaction price
+Quantity | string | Number of transactions
+Amount | string | transaction amount
+Fee | string | handling fee
+Direction | string | direction
+tradeTime | string | Order trading time, international time
+feeByConi | string | coni deduction
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/trade/fills?orderId=1912131427156307968
+Url: http://domain/api/exchange/v2/order/trade/fills?orderId=1912131427156307968
 Method: GET
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: 1f32e1c5d31e0258eba479023f0e768e318d6351097a3429eaa453b690364410
-	ACCESS-TIMESTAMP: 2019-06-13T03:45:23.943Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
-Body: 
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: 1f32e1c5d31e0258eba479023f0e768e318d6351097a3429eaa453b690364410
+ACCESS-TIMESTAMP: 2019-06-13T03:45:23.943Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
+Body:
 preHash: 2019-06-13T03:45:23.943ZGET/api/exchange/v2/order/fills?orderId=1912131427156307968
 
 Response:
 {
-  "code": 200, 
-  "data": [
-    {
-      "price": "63.16", 
-      "quantity": "1.2", 
-      "amount": "75.792", 
-      "fee": "0.075792", 
-      "direction": "buy", 
-      "tradeTime": "2019-06-13T03:27:38.0Z", 
-      "feeByConi": ""
-    }, 
-    {
-      "price": "63.16", 
-      "quantity": "1.2", 
-      "amount": "75.792", 
-      "fee": "0.075792", 
-      "direction": "buy", 
-      "tradeTime": "2019-06-13T03:27:38.0Z", 
-      "feeByConi": ""
-    }, 
-    {
-      "price": "63.16", 
-      "quantity": "1.2", 
-      "amount": "75.792", 
-      "fee": "0.075792", 
-      "direction": "buy", 
-      "tradeTime": "2019-06-13T03:27:38.0Z", 
-      "feeByConi": ""
-    }, 
-    {
-      "price": "63.16", 
-      "quantity": "1.1", 
-      "amount": "69.476", 
-      "fee": "0.069476", 
-      "direction": "buy", 
-      "tradeTime": "2019-06-13T03:27:38.0Z", 
-      "feeByConi": ""
-    }
-  ]
+  "code": 200,
+  "data": [
+    {
+      "price": "63.16",
+      "quantity": "1.2",
+      "amount": "75.792",
+      "fee": "0.075792",
+      "direction": "buy",
+      "tradeTime": "2019-06-13T03:27:38.0Z",
+      "feeByConi": ""
+    },
+    {
+      "price": "63.16",
+      "quantity": "1.2",
+      "amount": "75.792",
+      "fee": "0.075792",
+      "direction": "buy",
+      "tradeTime": "2019-06-13T03:27:38.0Z",
+      "feeByConi": ""
+    },
+    {
+      "price": "63.16",
+      "quantity": "1.2",
+      "amount": "75.792",
+      "fee": "0.075792",
+      "direction": "buy",
+      "tradeTime": "2019-06-13T03:27:38.0Z",
+      "feeByConi": ""
+    },
+    {
+      "price": "63.16",
+      "quantity": "1.1",
+      "amount": "69.476",
+      "fee": "0.069476",
+      "direction": "buy",
+      "tradeTime": "2019-06-13T03:27:38.0Z",
+      "feeByConi": ""
+    }
+  ]
 }
 ```
 
 
 
 
-### 私有接口-撤销指定委托单
+### Private Interface - Undo the specified order
 
 ```
-按用户请求进行订单列表查询，
-限速规则：6次/1秒
+Order list query by user request,
+Speed ​​limit rule: 6 times / 1 second
 HTTP POST /api/exchange/v2/order/cancel
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-orderId      | string | 是 | 委托单ID
+orderId | string | yes | order ID
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-data   | string | 撤销的订单Id
+Data | string | Undo Order Id
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/cancel
+Url: http://domain/api/exchange/v2/order/cancel
 Method: POST
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: f3d17b20841930f24776f3e921a270b2b47157ca62153421346de50690ce8a93
-	ACCESS-TIMESTAMP: 2019-06-13T03:25:56.360Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: f3d17b20841930f24776f3e921a270b2b47157ca62153421346de50690ce8a93
+ACCESS-TIMESTAMP: 2019-06-13T03:25:56.360Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
 Body: {"orderId":"1911862608898764800"}
 preHash: 2019-06-13T03:25:56.360ZPOST/api/exchange/v2/order/cancel{"orderId":"1911862608898764800"}
 
 
 Response:
 {
-  "code": 200, 
-  "data": "580719990266232832"
+  "code": 200,
+  "data": "580719990266232832"
 }
 ```
 
-### 私有接口-批量撤销委托单
+### Private Interface - Bulk Revocation Order
 
 ```
-按用户请求进行订单列表查询，
-限速规则：3次/1秒
+Order list query by user request,
+Speed ​​limit rule: 3 times / 1 second
 HTTP POST /api/exchange/v2/order/batchCancel
 ```
-请求参数：
-名称  | 类型  | 是否必填  | 说明
+Request parameters:
+Name | Type | Required / Description
 ---|---|---|---
-orderIds      | list<string> | 是 | 委托单ID
+orderIds | list<string> | Yes | Order ID
 
-返回字段说明：
+Return field description:
 
-名称   | 类型  | 说明
+Name | Type | Description
 ---|---|---|---
-data   | string | 撤销的订单Id
+Data | string | Undo Order Id
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/batchCancel
+Url: http://domain/api/exchange/v2/order/batchCancel
 Method: POST
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-	ACCESS-SIGN: 29b7636a3732fdbbcdde4144537faef3b1da1ed1f72f90552ccbf9b44bd79f12
-	ACCESS-TIMESTAMP: 2019-06-13T03:28:11.204Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=zh_CN
+Headers:
+Accept: application/json
+ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+ACCESS-SIGN: 29b7636a3732fdbbcdde4144537faef3b1da1ed1f72f90552ccbf9b44bd79f12
+ACCESS-TIMESTAMP: 2019-06-13T03:28:11.204Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=zh_CN
 Body: {"orderIds":["578639816552972288","578639902896914432"]}
 preHash: 2019-06-13T03:28:11.204ZPOST/api/exchange/v2/order/batchCancel{"orderIds":["578639816552972288","578639902896914432"]}
 
 Response:
 {
-  "code": 200, 
-  "data": [
-    {
-      "orderId": "578639816552972288", 
-      "message": "The order does not exist, the cancellation of failure"
-    }, 
-    {
-      "orderId": "578639902896914432", 
-      "message": "The order does not exist, the cancellation of failure"
-    }
-  ]
+  "code": 200,
+  "data": [
+    {
+      "orderId": "578639816552972288",
+      "message": "The order does not exist, the cancellation of failure"
+    },
+    {
+      "orderId": "578639902896914432",
+      "message": "The order does not exist, the cancellation of failure"
+    }
+  ]
 }
 
 ```
+
+
+
+
+
+
 
 
 
