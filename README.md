@@ -1,2 +1,2 @@
-# API-SPOT-Documents
-现货openapi相关文档
+# API-SPOT-v2-Documents
+现货openapi v2相关文档
