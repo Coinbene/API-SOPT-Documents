@@ -221,7 +221,6 @@ no
 Return field description:
 
 Name | Type | Description
-
 --- | --- | ---  
 symbol | string | currency pair name, such as BTC/USDT  
 baseAsset | string | pricing currency BTC  
@@ -315,7 +314,7 @@ HTTP GET /api/exchange/v2/market/tradePair/one
 Request parameters:
 Name | Type | Required | Description
 ---|---|---|---
-symbol | string |yes | currency pair name, such as BTC/USDT
+symbol | string | yes | currency pair name, such as BTC/USDT
 
 Return field description:
 
