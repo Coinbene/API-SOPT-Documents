@@ -2,7 +2,27 @@
 
 # coinbene-spot-rest Spot openapi rest interface description
 
-
+* [coinbene-spot-rest Spot openapi rest interface description](#coinbene-spot-rest-spot-openapi-rest-interface-description)
+      	* [Basic Information](#basic-information)
+      	* [restriction of visit](#restriction-of-visit)
+      	* [Interface Type](#interface-type)
+      	* [Signature](#signature)
+      	* [Interface Specification](#interface-specification)
+         	* [Public Interface - Get all transaction configuration information](#public-interface---get-all-transaction-configuration-information)
+         	* [Public interface - Get the specified transaction pair configuration information](#public-interface---get-the-specified-transaction-pair-configuration-information)
+         	* [Public interface - Get depth](#public-interface---get-depth)
+         	* [Public interface - Get the specified ticker information](#public-interface---get-the-specified-ticker-information)
+         	* [Public Interface - Check the latest transaction information](#public-interface---check-the-latest-transaction-information)
+         	* [Private Interface - Query all account information](#private-interface---query-all-account-information)
+         	* [Private Interface - Query specified account asset information](#private-interface---query-specified-account-asset-information)
+         	* [Private Interface - Order](#private-interface---order)
+         	* [Private Interface - Query the current list of delegate orders](#private-interface---query-the-current-list-of-delegate-orders)
+         	* [Private Interface - Query History Order List](#private-interface---query-history-order-list)
+         	* [Private Interface - Query specified order information](#private-interface---query-specified-order-information)
+         	* [Private Interface - Query Order Transactions List](#private-interface---query-order-transactions-list)
+         	* [Private Interface - Undo the specified order](#private-interface---undo-the-specified-order)
+         	* [Private Interface - Bulk Revocation Order](#private-interface---bulk-revocation-order)
+      	* [Error Code Summary](#error-code-summary)
 
 ## Basic Information
 - This section lists the baseurl for the REST interface: http://api.coinbene.com
