@@ -222,7 +222,8 @@ Return field description:
 
 Name | Type | Description
 
----|---|---
+---|---|--- 
+
 symbol | string | currency pair name, such as BTC/USDT 
 baseAsset | string | pricing currency BTC
 quoteAsset | string | Trading Currency USDT
@@ -232,7 +233,7 @@ takerFeeRate | string | taker fee
 makerFeeRate | string | maker fee
 minAmount | string | Latest Lots
 priceFluctuation | string | Price fluctuation limit
-Site | string | own site
+site | string | own site
 
 ```
 Request:
