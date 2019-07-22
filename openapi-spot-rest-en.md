@@ -311,8 +311,8 @@ Get the specified transaction pair configuration information
 Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/tradePair/one
 ```
-Request parameters:
-Name | Type | Required | Description
+Request parameters:  
+Name | Type | Required | Description  
 ---|---|---|---
 symbol | string | yes | currency pair name, such as BTC/USDT
 
