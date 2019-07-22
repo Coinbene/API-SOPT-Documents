@@ -2,6 +2,8 @@
 
 # coinbene-spot-rest Spot openapi rest interface description
 
+[中文版本](https://github.com/Coinbene/API-SPOT-v2-Documents/blob/master/openapi-spot-rest.md)
+
 * [coinbene-spot-rest Spot openapi rest interface description](#coinbene-spot-rest-spot-openapi-rest-interface-description)
 	* [Basic Information](#basic-information)
 	* [restriction of visit](#restriction-of-visit)
