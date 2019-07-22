@@ -221,6 +221,7 @@ no
 Return field description:
 
 Name | Type | Description
+
 ---|---|---|---
 Symbol | string | currency pair name, such as BTC/USDT
 baseAsset | string | pricing currency BTC
