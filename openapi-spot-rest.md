@@ -1022,11 +1022,11 @@ HTTP GET /api/exchange/v2/account/one
 请求参数
 名称   | 类型  | 是否必填  | 说明
 ---|---|---|---
-asset   | string | 是 | 资产名称/缩写，如BTC
+asset  | string | 是 | 资产名称/缩写，如BTC
 
 返回结果参数
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 asset   | string | 资产名称/缩写
 available   | string | 可用余额
 frozenBalance   | string | 冻结余额
