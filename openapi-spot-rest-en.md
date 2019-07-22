@@ -943,12 +943,13 @@ Request parameter
 no
 
 Return result parameter
-Name | Type | Description
----|---|---
-asset | string | asset name
-available | string | available balance
-frozenBalance | string | Freeze balance
-totalBalance | string | total
+
+Name | Type | Description  
+---|---|---  
+asset | string | asset name  
+available | string | available balance  
+frozenBalance | string | Freeze balance  
+totalBalance | string | total  
 
 ```
 Request:
@@ -1224,10 +1225,11 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/closedOrders
 ```
 Request parameters:
-Name | Type | Required | Description
----|---|---|---
-symbol | string | no | currency pair name, such as BTC/USDT
-latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | no | currency pair name, such as BTC/USDT  
+latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data  
 
 ```
 Description:
@@ -1314,29 +1316,29 @@ Order list query by user request,
 Speed ​​limit rule: 6 times / 1 second
 HTTP GET/api/exchange/v2/order/info
 ```
-Request parameters:
-Name | Type | Required | Description
----|---|---|---
+Request parameters:  
+Name | Type | Required | Description  
+---|---|---|---  
 orderId | string | yes | order ID
 
 
 Return field description:
 
-Name | Type | Description
----|---|---|---
-orderId | string | Order Id
-baseAsset | string | base currency, such as BTC
-quoteAsset | string | Trading currency, such as USDT
-orderDirection | string | Direction, 1: Buy 2: Buy
-quantity | string | order quantity
-amount | string | order amount
-filledAmount | string |
-takerFeeRate | string | taker rate
-makerFeeRate | string | maker rate
-avgPrice | string | Average price
-orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
-orderTime | string | Order time
-totalFee | string | handling fee
+Name | Type | Description  
+---|---|---|---  
+orderId | string | Order Id  
+baseAsset | string | base currency, such as BTC  
+quoteAsset | string | Trading currency, such as USDT.  
+orderDirection | string | Direction, 1: Buy 2: Buy.  
+quantity | string | order quantity.  
+amount | string | order amount.  
+filledAmount | string |.  
+takerFeeRate | string | taker rate.  
+makerFeeRate | string | maker rate.  
+avgPrice | string | Average price.  
+orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled.  
+orderTime | string | Order time.  
+totalFee | string | handling fee.  
 
 ```
 Request:
