@@ -312,8 +312,9 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/tradePair/one
 ```
 Request parameters:  
+
 Name | Type | Required | Description  
----|---|---|---
+---|---|---|---  
 symbol | string | yes | currency pair name, such as BTC/USDT
 
 Return field description:
@@ -372,9 +373,10 @@ HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
 ```
 
 Request parameters:
-Name | Type | Required | Description
----|---|---|---
-symbol | string | yes | currency pair name, such as BTC/USDT
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | yes | currency pair name, such as BTC/USDT  
 depth | string | No | Depth stall, values ​​are 5, 10, 50, 100. Default value 10
 
 Return field description:
@@ -472,9 +474,10 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP GET /api/exchange/v2/market/ticker/one
 ```
 Request parameters: none
-Name | Type | Required | Description
----|---|---|---
-symbol | string | yes | currency pair name, such as BTC/USDT
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | yes | currency pair name, such as BTC/USDT  
 
 Return field description:
 
@@ -527,8 +530,9 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/trades
 ```
 Request parameters:
-Name | Type | Required | Description
----|---|---|---
+
+Name | Type | Required | Description  
+---|---|---|---  
 symbol | string | yes | currency pair name, such as BTC/USDT
 
 Return field description:
@@ -1008,15 +1012,17 @@ HTTP GET /api/exchange/v2/account/one
 ```
 
 Request parameter
-Name | Type | Required | Description
----|---|---|---
+
+Name | Type | Required | Description  
+---|---|---|---  
 asset | string | yes | asset name/abbreviation, such as BTC
 
 Return result parameter
-Name | Type | Description
----|---|---
-asset | string | asset name
-available | string | available balance
+
+Name | Type | Description  
+---|---|---  
+asset | string | asset name  
+available | string | available balance  
 frozenBalance | string | Freeze balance
 totalBalance | string | total, freeze + balance
 
@@ -1055,12 +1061,13 @@ Speed ​​limit rule: 6 times / 1 second
 HTTP POST/api/exchange/v2/order/place
 ```
 Request parameters:
-Name | Type | Required | Description
----|---|---|---
-symbol | string | yes | currency pair name, such as BTC/USDT
-direction | string | yes | direction, 1: buy 2: sell
-price | string | yes | order price
-quantity | string | yes | quantity
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | yes | currency pair name, such as BTC/USDT  
+direction | string | yes | direction, 1: buy 2: sell  
+price | string | yes | order price  
+quantity | string | yes | quantity  
 clientId | string | no | user request id, transparently returned to the user
 
 
@@ -1110,9 +1117,10 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP GET/api/exchange/v2/order/openOrders
 ```
 Request parameters:
-Name | Type | Required / Description
----|---|---|---
-symbol | string | no | currency pair name, such as BTC/USDT
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | no | currency pair name, such as BTC/USDT  
 latestOrderId | string | No | Order id, used by page, the default value is empty, return the latest 20 data, displayed in reverse order by order id. Get the last order id-1, take the next page of data
 
 
@@ -1229,13 +1237,13 @@ Paging query, return 20 per page
 
 Return field description:
 
-Name | Type | Description
----|---|---|---
-orderId | string | Order Id
-baseAsset | string | base currency, such as BTC
-quoteAsset | string | Trading currency, such as USDT
-orderDirection | string | direction
-quantity | string | order quantity
+Name | Type | Description  
+---|---|---|---  
+orderId | string | Order Id  
+baseAsset | string | base currency, such as BTC  
+quoteAsset | string | Trading currency, such as USDT  
+orderDirection | string | direction  
+quantity | string | order quantity  
 amount | string | order amount
 filledAmount | string |
 takerFeeRate | string | taker rate
