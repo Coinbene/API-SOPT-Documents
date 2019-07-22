@@ -225,6 +225,7 @@ takerFeeRate   | string | taker手续费
 makerFeeRate   | string | maker手续费
 minAmount   | string | 最新成交数量
 priceFluctuation   | string | 价格波动限制
+site   | string | 所属站点
 
 ```
 Request:
@@ -254,6 +255,7 @@ Response:
       "takerFeeRate": "0.0010", 
       "makerFeeRate": "0.0010", 
       "minAmount": "1.00000000", 
+      "site":"MAIN",
       "priceFluctuation": "0.50"
     }, 
     {
@@ -264,7 +266,8 @@ Response:
       "amountPrecision": "2", 
       "takerFeeRate": "0.0010", 
       "makerFeeRate": "0.0010", 
-      "minAmount": "1.00000000", 
+      "minAmount": "1.00000000",
+      "site":"MAIN",
       "priceFluctuation": "0.50"
     }, 
     {
@@ -276,6 +279,7 @@ Response:
       "takerFeeRate": "0.0010", 
       "makerFeeRate": "0.0010", 
       "minAmount": "1.00000000", 
+      "site":"MAIN",
       "priceFluctuation": "0.50"
     }, 
     {
@@ -287,6 +291,7 @@ Response:
       "takerFeeRate": "0.0010", 
       "makerFeeRate": "0.0010", 
       "minAmount": "1.00000000", 
+      "site":"MAIN",
       "priceFluctuation": "0.50"
     }
   ]
@@ -318,6 +323,7 @@ takerFeeRate   | string | taker手续费
 makerFeeRate   | string | maker手续费
 minAmount   | string | 最新成交数量
 priceFluctuation   | string | 价格波动限制
+site   | string | 所属站点
 
 ```
 Request:
@@ -346,6 +352,7 @@ Response:
     "takerFeeRate": "0.0010", 
     "makerFeeRate": "0.0010", 
     "minAmount": "0.00010000", 
+    "site":"MAIN",
     "priceFluctuation": "0.50"
   }
 }
@@ -1001,6 +1008,7 @@ asset   | string | 是 | 资产名称/缩写，如BTC
 返回结果参数
 名称   | 类型  | 说明
 ---|---|---|---
+asset   | string | 资产名称/缩写
 available   | string | 可用余额
 frozenBalance   | string | 冻结余额
 totalBalance   | string | 总额，冻结+余额
@@ -1024,6 +1032,7 @@ Response:
 {
   "code": 200, 
   "data": {
+    "asset": "BTC",
     "available": "466.00000000", 
     "frozenBalance": "34.00000000", 
     "totalBalance": "500.00000000"
