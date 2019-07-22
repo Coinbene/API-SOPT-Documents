@@ -234,7 +234,7 @@ HTTP GET /api/exchange/v2/market/tradePair/list
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 symbol   | string | 币对名称, 如BTC/USDT
 baseAsset   | string | 计价货币 BTC
 quoteAsset   | string | 交易货币 USDT
