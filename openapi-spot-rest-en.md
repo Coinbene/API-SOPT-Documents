@@ -1326,20 +1326,20 @@ orderId | string | yes | order ID
 Return field description:
 
 Name | Type | Description  
----|---|---|---  
+---|---|---
 orderId | string | Order Id  
 baseAsset | string | base currency, such as BTC  
-quoteAsset | string | Trading currency, such as USDT.  
-orderDirection | string | Direction, 1: Buy 2: Buy.  
-quantity | string | order quantity.  
-amount | string | order amount.  
-filledAmount | string |.  
-takerFeeRate | string | taker rate.  
-makerFeeRate | string | maker rate.  
-avgPrice | string | Average price.  
-orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled.  
-orderTime | string | Order time.  
-totalFee | string | handling fee.  
+quoteAsset | string | Trading currency, such as USDT
+orderDirection | string | Direction, 1: Buy 2: Buy 
+quantity | string | order quantity
+amount | string | order amount
+filledAmount | string |
+takerFeeRate | string | taker rate
+makerFeeRate | string | maker rate  
+avgPrice | string | Average price  
+orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
+orderTime | string | Order time 
+totalFee | string | handling fee  
 
 ```
 Request:
