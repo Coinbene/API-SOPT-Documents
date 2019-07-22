@@ -222,8 +222,8 @@ Return field description:
 
 Name | Type | Description
 
----|---|--- 
-symbol | string | currency pair name 
+--- | --- | ---
+symbol | string | currency pair name, such as BTC/USDT
 baseAsset | string | pricing currency BTC
 quoteAsset | string | Trading Currency USDT
 pricePrecision | string | Price accuracy
