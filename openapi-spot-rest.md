@@ -325,6 +325,7 @@ Response:
 HTTP GET /api/exchange/v2/market/tradePair/one
 ```
 请求参数：
+
 名称   | 类型  |是否必填  | 说明
 ---|---|---|---
 symbol   | string |是  | 币对名称，如BTC/USDT
@@ -385,6 +386,7 @@ HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
 ```
 
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 symbol | string | 是 | 币对名称，如BTC/USDT
@@ -393,7 +395,7 @@ depth   | string | 否 | 深度档位，值有5、10、50、100。默认值10
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 asks   | array | 卖方深度，[档位价格，数量]
 bids   | array | 买方深度，[档位价格，数量]
 
@@ -483,6 +485,7 @@ Response:
 HTTP GET /api/exchange/v2/market/ticker/one
 ```
 请求参数：无
+
 名称   | 类型  | 是否必填 | 说明
 ---|---|---|---
 symbol | string | 是 | 币对名称，如BTC/USDT
@@ -490,7 +493,7 @@ symbol | string | 是 | 币对名称，如BTC/USDT
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 symbol         | string | 币对名称，如BTC/USDT
 latestPrice           | string | 最新价
 bestAsk            | string | 卖一价
@@ -538,14 +541,15 @@ Response:
 HTTP GET /api/exchange/v2/market/trades
 ```
 请求参数：
+
 名称   | 类型  | 是否必填 | 说明
 ---|---|---|---
 symbol | string | 是 | 币对名称，如BTC/USDT
 
 返回字段说明：
 
-名称   | 类型  | 说明
----|---|---|---
+名称 | 类型  | 说明
+---|---|---
 symbol   | string | 币对名称
 price   | string | 成交价格
 volume   | string | 成交数量
@@ -951,7 +955,8 @@ HTTP GET /api/exchange/v2/account/list
 无
 
 返回结果参数
-名称   | 类型  | 说明
+
+名称  | 类型  | 说明
 ---|---|---
 asset   | string | 资产名称/缩写
 available   | string | 可用余额
@@ -1020,11 +1025,13 @@ HTTP GET /api/exchange/v2/account/one
 ```
 
 请求参数
+
 名称   | 类型  | 是否必填  | 说明
 ---|---|---|---
 asset  | string | 是 | 资产名称/缩写，如BTC
 
 返回结果参数
+
 名称   | 类型  | 说明
 ---|---|---
 asset   | string | 资产名称/缩写
@@ -1067,6 +1074,7 @@ Response:
 HTTP POST/api/exchange/v2/order/place
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
@@ -1083,7 +1091,7 @@ clientId      | string | 否 | 用户请求id，透传返回给用户
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 orderId   | string | 生成的订单id
 clientId   | string | 用户请求的clientId
 
@@ -1122,6 +1130,7 @@ Response:
 HTTP GET/api/exchange/v2/order/openOrders
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 symbol      | string | 否 | 币对名称，如BTC/USDT
@@ -1137,7 +1146,7 @@ latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 orderId   | string | 订单Id
 baseAsset   | string | 基础货币，如BTC
 quoteAsset   | string | 交易货币，如USDT
@@ -1228,6 +1237,7 @@ Response:
 HTTP GET/api/exchange/v2/order/closedOrders
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 symbol      | string | 否 | 币对名称，如BTC/USDT
@@ -1242,7 +1252,7 @@ latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 orderId   | string | 订单Id
 baseAsset   | string | 基础货币，如BTC
 quoteAsset   | string | 交易货币，如USDT
@@ -1318,6 +1328,7 @@ Response:
 HTTP GET/api/exchange/v2/order/info
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 orderId      | string | 是 | 委托单ID
@@ -1326,7 +1337,7 @@ orderId      | string | 是 | 委托单ID
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 orderId   | string | 订单Id
 baseAsset   | string | 基础货币，如BTC
 quoteAsset   | string | 交易货币，如USDT
@@ -1385,6 +1396,7 @@ Response:
 HTTP GET/api/exchange/v2/order/trade/fills
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 orderId      | string | 是 | 委托单ID
@@ -1393,7 +1405,7 @@ orderId      | string | 是 | 委托单ID
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 price   | string | 交易价格
 quantity   | string | 交易数量
 amount   | string | 交易金额
@@ -1471,6 +1483,7 @@ Response:
 HTTP POST /api/exchange/v2/order/cancel
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 orderId      | string | 是 | 委托单ID
@@ -1478,7 +1491,7 @@ orderId      | string | 是 | 委托单ID
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 data   | string | 撤销的订单Id
 
 ```
@@ -1511,6 +1524,7 @@ Response:
 HTTP POST /api/exchange/v2/order/batchCancel
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 orderIds      | list<string> | 是 | 委托单ID
@@ -1518,7 +1532,7 @@ orderIds      | list<string> | 是 | 委托单ID
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 data   | string | 撤销的订单Id
 
 ```
