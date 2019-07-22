@@ -1556,6 +1556,23 @@ Response:
 ```
 
 
+## Error Code Summary
+
+Error code | message
+---|:---
+429 | Requests are too frequent
+10001 | "ACCESS_KEY" cannot be empty
+10002 | "ACCESS_SIGN" cannot be empty
+10003 | "ACCESS_TIMESTAMP" cannot be empty
+10005 | Invalid ACCESS_TIMESTAMP
+10006 | Invalid ACCESS_KEY
+10007 | Invalid Content_Type, please use the "application/json" format
+10008 | Request timestamp expired
+10009 | System error
+100011 | Invalid sign
+100012 |api verification failed
+
+
 
 
 
