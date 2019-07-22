@@ -1,8 +1,7 @@
 
 
 # coinbene-spot-rest Spot openapi rest interface description
-
-* [coinbene-spot-rest Spot openapi rest interface description](#coinbene-spot-rest-spot-openapi-rest-interface-description)
+	* [coinbene-spot-rest Spot openapi rest interface description](#coinbene-spot-rest-spot-openapi-rest-interface-description)
       	* [Basic Information](#basic-information)
       	* [restriction of visit](#restriction-of-visit)
       	* [Interface Type](#interface-type)
