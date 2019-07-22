@@ -1510,6 +1510,7 @@ Speed ​​limit rule: 3 times / 1 second
 HTTP POST /api/exchange/v2/order/batchCancel
 ```
 Request parameters:
+
 Name | Type | Required | Description
 ---|---|---|---
 orderIds | list<string> | Yes | Order ID
