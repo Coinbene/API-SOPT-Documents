@@ -27,7 +27,7 @@
 	* [Error Code Summary](#error-code-summary)
 
 ## Basic Information
-- This section lists the baseurl for the REST interface: http://api.coinbene.com
+- This section lists the baseurl for the REST interface: http://openapi-exchange.coinbene.com or https://openapi-exchange.coinbene.com
 - It is recommended to add the own server export IP after modifying the API to further enhance the API security check.
 - The response of all interfaces is in JSON format
 - All time and timestamp are UNIX time in milliseconds
