@@ -25,7 +25,7 @@
          	* [私有接口-批量撤销委托单](#私有接口-批量撤销委托单)
 * [错误代码汇总](#错误代码汇总)
 ## 基本信息
-- 本篇列出REST接口的baseurl: http://api.coinbene.com
+- 本篇列出REST接口的baseurl: http://openapi-exchange.coinbene.com 或 https://openapi-exchange.coinbene.com
 - 建议创建完API后，修改添加上自己服务器出口IP，进一步增强API安全性校验
 - 所有接口的响应都是JSON格式
 - 所有时间、时间戳均为UNIX时间，单位为毫秒
