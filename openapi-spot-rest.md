@@ -1597,8 +1597,24 @@ data   | string | 提币申请ID
 
 ```
 Request:
- 
+Url: http://域名/api/exchange/v2/withdraw/apply
+Method: POST
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: API-KEY-10000886
+	ACCESS-SIGN: 2763b96fba87a5ff248d45b35140908461b3e7599233d0a0c0dacff82ca8d0d9
+	ACCESS-TIMESTAMP: 2019-09-25T09:59:58.080Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: {"amount":"2","asset":"USDT","address":"XXXXX","tag":"","chain":""}
+preHash: 2019-09-25T09:59:58.080ZPOST/api/exchange/v2/withdraw/apply{"amount":"2","asset":"USDT","address":"XXXXX","tag":"","chain":""}
 
+Response:
+{
+  "code": 200, 
+  "data": "578639816552972288",
+  "message": ""
+}
 ```
 
 
