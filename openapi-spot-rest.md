@@ -23,7 +23,6 @@
          	* [私有接口-查询订单成交明细列表](#私有接口-查询订单成交明细列表)
          	* [私有接口-撤销指定委托单](#私有接口-撤销指定委托单)
          	* [私有接口-批量撤销委托单](#私有接口-批量撤销委托单)
-		* [私有接口-提币申请接口](#私有接口-提币申请接口)
 * [错误代码汇总](#错误代码汇总)
 ## 基本信息
 - 本篇列出REST接口的baseurl: http://openapi-exchange.coinbene.com 或 https://openapi-exchange.coinbene.com
@@ -1572,50 +1571,7 @@ Response:
 
 
 
-### 私有接口-提币申请接口
 
-```
-按用户请求进行订单列表查询，
-限速规则：1次/10秒
-HTTP POST /api/exchange/v2/withdraw/apply
-```
-请求参数：
-
-名称  | 类型  | 是否必填  | 说明
----|---|---|---
-amount      | String | 是 | 提币数量
-asset      | String | 是 | 资产名称
-address      | String | 是 | 提币地址
-tag      | String | 是 | 提币数量
-chain      | String | 是 | 所属链
-
-返回字段说明：
-
-名称   | 类型  | 说明
----|---|---
-data   | string | 提币申请ID
-
-```
-Request:
-Url: http://域名/api/exchange/v2/withdraw/apply
-Method: POST
-Headers: 
-	Accept: application/json
-	ACCESS-KEY: API-KEY-10000886
-	ACCESS-SIGN: 2763b96fba87a5ff248d45b35140908461b3e7599233d0a0c0dacff82ca8d0d9
-	ACCESS-TIMESTAMP: 2019-09-25T09:59:58.080Z
-	Content-Type: application/json; charset=UTF-8
-	Cookie: locale=en_US
-Body: {"amount":"2","asset":"USDT","address":"XXXXX","tag":"","chain":""}
-preHash: 2019-09-25T09:59:58.080ZPOST/api/exchange/v2/withdraw/apply{"amount":"2","asset":"USDT","address":"XXXXX","tag":"","chain":""}
-
-Response:
-{
-  "code": 200, 
-  "data": "578639816552972288",
-  "message": ""
-}
-```
 
 
 
