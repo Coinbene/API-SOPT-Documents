@@ -1159,7 +1159,7 @@ filledQuantity   | string | 已成交数量
 amount   | string | 订单金额
 filledAmount   | string | 已成交金额
 avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partiallyCancelled
+orderStatus   | string | 订单状态，未成交：Open 完全成交：Filled 取消：Cancelled 部分成交：Partially cancelled
 orderTime   | string | 下单时间
 fee   | string | 手续费
 
@@ -1266,7 +1266,7 @@ filledAmount   | string | 已成交金额
 takerFeeRate   | string | taker费率
 makerFeeRate   | string | maker费率
 avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partially cancelled
+orderStatus   | string | 订单状态，未成交：Open 完全成交：Filled 取消：Cancelled 部分成交：Partially cancelled
 orderTime   | string | 下单时间
 totalFee   | string | 手续费
 
@@ -1351,7 +1351,7 @@ filledAmount   | string | 已成交金额
 takerFeeRate   | string | taker费率
 makerFeeRate   | string | maker费率
 avgPrice   | string | 平均价格
-orderStatus   | string | 订单状态，未成交：open 完全成交：filled 取消：cancelled 部分成交：partially cancelled
+orderStatus   | string | 订单状态，未成交：Open 完全成交：Filled 取消：Cancelled 部分成交：Partially cancelled
 orderTime   | string | 下单时间
 totalFee   | string | 手续费
 
