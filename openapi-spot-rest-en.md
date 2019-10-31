@@ -1167,7 +1167,7 @@ fillQuantity | string | Number of transactions
 amount | string | order amount
 filledAmount | string |
 avgPrice | string | Average price
-orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partialCancelled
+orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time
 fee | string | handling fee
 
@@ -1274,7 +1274,7 @@ filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate
 avgPrice | string | Average price
-orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
+orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time
 totalFee | string | handling fee
 
@@ -1360,7 +1360,7 @@ filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate  
 avgPrice | string | Average price  
-orderStatus | string | Order status, unfilled: open Completed: filled Cancel: canceled Partial deal: partially cancelled
+orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time 
 totalFee | string | handling fee  
 
