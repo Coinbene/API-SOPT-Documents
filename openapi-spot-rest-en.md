@@ -1167,6 +1167,7 @@ fillQuantity | string | Number of transactions
 amount | string | order amount
 filledAmount | string |
 avgPrice | string | Average price
+orderPrice | string | order price
 orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time
 fee | string | handling fee
@@ -1201,24 +1202,10 @@ Response:
       "filledAmount": "0",
       "takerFeeRate": "0.001",
       "makerFeeRate": "0.001",
-      "avgPrice": "0",
+      "avgPrice": "0", 
+      "orderPrice": "10", 
       "orderStatus": "Open",
       "orderTime": "2019-06-13T02:41:24.0Z",
-      "totalFee": "0"
-    },
-    {
-      "orderId": "1911862608898764800",
-      "baseAsset": "BTC",
-      "quoteAsset": "USDT",
-      "orderDirection": "buy",
-      "quantity": "54",
-      "amount": "3645",
-      "filledAmount": "0",
-      "takerFeeRate": "0.001",
-      "makerFeeRate": "0.001",
-      "avgPrice": "0",
-      "orderStatus": "Open",
-      "orderTime": "2019-06-12T09:39:27.0Z",
       "totalFee": "0"
     },
     {
@@ -1231,7 +1218,8 @@ Response:
       "filledAmount": "0",
       "takerFeeRate": "0.001",
       "makerFeeRate": "0.001",
-      "avgPrice": "0",
+      "avgPrice": "0", 
+      "orderPrice": "10", 
       "orderStatus": "Open",
       "orderTime": "2019-06-12T09:39:12.0Z",
       "totalFee": "0"
@@ -1274,6 +1262,7 @@ filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate
 avgPrice | string | Average price
+orderPrice | string | order price
 orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time
 totalFee | string | handling fee
@@ -1307,7 +1296,8 @@ Response:
       "filledAmount": "3979.557",
       "takerFeeRate": "0.001",
       "makerFeeRate": "0.001",
-      "avgPrice": "63.1675714285714285714286",
+      "avgPrice": "0", 
+      "orderPrice": "10", 
       "orderStatus": "Filled",
       "orderTime": "2019-06-13T03:27:38.0Z",
       "totalFee": "3.979557"
@@ -1322,7 +1312,8 @@ Response:
       "filledAmount": "0",
       "takerFeeRate": "0.001",
       "makerFeeRate": "0.001",
-      "avgPrice": "0",
+      "avgPrice": "0", 
+      "orderPrice": "10", 
       "orderStatus": "Cancelled",
       "orderTime": "2019-06-12T09:39:27.0Z",
       "totalFee": "0"
@@ -1360,6 +1351,7 @@ filledAmount | string |
 takerFeeRate | string | taker rate
 makerFeeRate | string | maker rate  
 avgPrice | string | Average price  
+orderPrice | string | order price
 orderStatus | string | Order status, unfilled: Open Completed: Filled Cancel: Canceled Partial deal: Partially cancelled
 orderTime | string | Order time 
 totalFee | string | handling fee  
@@ -1389,6 +1381,8 @@ Response:
     "quantity": "54",
     "amount": "3645",
     "filledAmount": "0",
+    "avgPrice": "0", 
+    "orderPrice": "10", 
     "takerFeeRate": "0.001",
     "makerFeeRate": "0.001",
     "orderStatus": "Cancelled",
