@@ -1083,13 +1083,11 @@ HTTP POST/api/exchange/v2/order/place
 symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
 direction      | string | 是 | 方向，1:买 2:卖
 price      | string | 是 | 下单价格
-quantity      | string | 是 | 数量
+quantity      | string | 是 | 限价单委托数量，市价单卖出数量
+orderType      | string | 是 | 1:限价 2:市价
+notional      | string | 否 | 市价单买入金额
 clientId      | string | 否 | 用户请求id，透传返回给用户
 
-
-```
-1.只支持限价单类型
-```
 
 返回字段说明：
 
@@ -1123,6 +1121,71 @@ Response:
   }
 }
 ```
+
+
+
+### 私有接口-批量下单
+
+```
+按用户输入进行下单操作
+限速规则：3次/1秒
+HTTP POST/api/exchange/v2/order/batchPlaceOrder
+```
+请求参数是一个数组对象,包含下面参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
+direction      | string | 是 | 方向，1:买 2:卖
+price      | string | 是 | 下单价格
+quantity      | string | 是 | 限价单委托数量，市价单卖出数量
+orderType      | string | 是 | 1:限价 2:市价
+notional      | string | 否 | 市价单买入金额，市价买单必填
+clientId      | string | 否 | 用户请求id，透传返回给用户
+
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+orderId   | string | 生成的订单id
+clientId   | string | 用户请求的clientId
+
+
+```
+Request:
+Url: http://域名/api/exchange/v2/order/batchPlaceOrder
+Method: POST
+Headers: 
+Accept: application/json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: a7b3bf35b8c65edb5e9a8b8eacc0505ce0f20d93e6541e6526f16ae12dbb6c30
+ACCESS-TIMESTAMP: 2019-11-23T12:58:09.300Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=en_US
+Body: [{"symbol":"BTC/USDT","price":"11111.0","quantity":"1","direction":"1","orderType":"1"},{"symbol":"BTC/USDT","price":"0.0","quantity":"0","direction":"1","orderType":"2","notional":"10"}]
+preHash: 2019-11-23T12:59:40.797ZPOST/api/exchange/v2/order/batchPlaceOrder[{"symbol":"BTC/USDT","price":"11111.0","quantity":"1","direction":"1","orderType":"1"},{"symbol":"BTC/USDT","price":"0.0","quantity":"0","direction":"1","orderType":"2","notional":"10"}]
+
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "code":"200",
+            "orderId": "1911862608898764800", 
+            "message":""
+        },
+        {
+            "code":"200",
+            "orderId": "1911862608898764801", 
+            "message":""
+        }
+    ]
+}
+
+```
+
+
 
 
 ### 私有接口-查询当前委托挂单列表
