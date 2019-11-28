@@ -1135,16 +1135,18 @@ HTTP POST/api/exchange/v2/order/batchPlaceOrder
 
 请求参数是一个数组对象,包含下面参数
 
-名称  | 类型  | 是否必填  | 说明
 
+名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
-symbol | string | 是 | 币对名称，如BTC/USDT，用"/"分割
+symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
 direction      | string | 是 | 方向，1:买 2:卖
 price      | string | 是 | 下单价格
 quantity      | string | 是 | 限价单委托数量，市价单卖出数量
 orderType      | string | 是 | 1:限价 2:市价
-notional      | string | 否 | 市价单买入金额，市价买单必填
+notional      | string | 否 | 市价单买入金额
 clientId      | string | 否 | 用户请求id，透传返回给用户
+
+
 
 
 返回字段说明：
