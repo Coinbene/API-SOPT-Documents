@@ -1132,10 +1132,13 @@ Response:
 限速规则：3次/1秒
 HTTP POST/api/exchange/v2/order/batchPlaceOrder
 ```
-请求参数是一个数组对象,包含下面参数：
+
+请求参数是一个数组对象,包含下面参数
+
 名称  | 类型  | 是否必填  | 说明
+
 ---|---|---|---
-symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
+symbol | string | 是 | 币对名称，如BTC/USDT，用"/"分割
 direction      | string | 是 | 方向，1:买 2:卖
 price      | string | 是 | 下单价格
 quantity      | string | 是 | 限价单委托数量，市价单卖出数量
