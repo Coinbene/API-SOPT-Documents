@@ -18,6 +18,7 @@
 		* [Private Interface - Query all account information](#private-interface---query-all-account-information)
 		* [Private Interface - Query specified account asset information](#private-interface---query-specified-account-asset-information)
 		* [Private Interface - Order](#private-interface---order)
+		* [Private Interface - Batch Order](#private-interface---batch-order)
 		* [Private Interface - Query the current list of delegate orders](#private-interface---query-the-current-list-of-delegate-orders)
 		* [Private Interface - Query History Order List](#private-interface---query-history-order-list)
 		* [Private Interface - Query specified order information](#private-interface---query-specified-order-information)
@@ -1091,13 +1092,11 @@ Name | Type | Required | Description
 symbol | string | yes | currency pair name, such as BTC/USDT  
 direction | string | yes | direction, 1: buy 2: sell  
 price | string | yes | order price  
-quantity | string | yes | quantity  
+quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold
+orderType | string | yes | 1: Limit price 2: Market price
+notional | string | no | Market Order Purchase Amount
 clientId | string | no | user request id, transparently returned to the user
 
-
-```
-1. Only limit order types are supported.
-```
 
 Return field description:
 
@@ -1131,6 +1130,68 @@ Response:
   }
 }
 ```
+
+### Private Interface - Batch Order
+
+```
+Order by user input
+Speed ​​limit rule: 3 times / 1 second
+HTTP POST/api/exchange/v2/order/batchPlaceOrder
+```
+Request parameters: The request parameter is an array object containing the following parameters
+
+Name | Type | Required | Description  
+---|---|---|---  
+symbol | string | yes | currency pair name, such as BTC/USDT  
+direction | string | yes | direction, 1: buy 2: sell  
+price | string | yes | order price  
+quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold
+orderType | string | yes | 1: Limit price 2: Market price
+notional | string | no | Market Order Purchase Amount
+clientId | string | no | user request id, transparently returned to the user
+
+
+Return field description:
+
+Name | Type | Description
+---|---|---
+orderId | string | generated order id
+clientId | string | clientId requested by client
+
+
+```
+Request:
+Url: http://域名/api/exchange/v2/order/batchPlaceOrder
+Method: POST
+Headers: 
+Accept: application/json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: a7b3bf35b8c65edb5e9a8b8eacc0505ce0f20d93e6541e6526f16ae12dbb6c30
+ACCESS-TIMESTAMP: 2019-11-23T12:58:09.300Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=en_US
+Body: [{"symbol":"BTC/USDT","price":"11111.0","quantity":"1","direction":"1","orderType":"1"},{"symbol":"BTC/USDT","price":"0.0","quantity":"0","direction":"1","orderType":"2","notional":"10"}]
+preHash: 2019-11-23T12:59:40.797ZPOST/api/exchange/v2/order/batchPlaceOrder[{"symbol":"BTC/USDT","price":"11111.0","quantity":"1","direction":"1","orderType":"1"},{"symbol":"BTC/USDT","price":"0.0","quantity":"0","direction":"1","orderType":"2","notional":"10"}]
+
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "code":"200",
+            "orderId": "1911862608898764800", 
+            "message":""
+        },
+        {
+            "code":"200",
+            "orderId": "1911862608898764801", 
+            "message":""
+        }
+    ]
+}
+```
+
 
 
 ### Private Interface - Query the current list of delegate orders
