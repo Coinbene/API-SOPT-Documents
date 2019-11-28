@@ -1161,7 +1161,7 @@ clientId | string | clientId requested by client
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/batchPlaceOrder
+Url: http://domain/api/exchange/v2/order/batchPlaceOrder
 Method: POST
 Headers: 
 Accept: application/json
