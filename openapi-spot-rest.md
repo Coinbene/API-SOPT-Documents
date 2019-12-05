@@ -394,7 +394,7 @@ HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 symbol | string | 是 | 币对名称，如BTC/USDT
-depth   | string | 否 | 深度档位，值有5、10、50、100。默认值10
+depth   | string | 是 | 深度档位，值有5、10、50、100
 
 返回字段说明：
 
