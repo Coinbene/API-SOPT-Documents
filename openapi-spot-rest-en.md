@@ -401,7 +401,7 @@ Request parameters:
 Name | Type | Required | Description  
 ---|---|---|---  
 symbol | string | yes | currency pair name, such as BTC/USDT  
-depth | string | No | Depth stall, values ​​are 5, 10, 50, 100. Default value 10
+depth | string | yes | Depth stall, values ​​are 5, 10, 50, 100. Default value 10
 
 Return field description:
 
