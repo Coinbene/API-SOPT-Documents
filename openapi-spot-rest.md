@@ -1236,7 +1236,7 @@ fee   | string | 手续费
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT&pageNum=1&pageSize=3
+Url: http://域名/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT
 Method: GET
 Headers: 
 	Accept: application/json
