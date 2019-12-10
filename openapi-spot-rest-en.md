@@ -35,7 +35,6 @@
 - All time and timestamp are UNIX time in milliseconds
 - The HTTP 4XX error code is used to indicate the content, behavior, and format of the error.
 - HTTP 429 error code indicates warning access frequency is exceeded, IP will be blocked
-- HTTP 418 indicates that access is continued after receiving 429, so it is blocked.
 - The HTTP 5XX error code is used to indicate problems on the Coinbene service side.
 - HTTP 504 indicates that the API server has submitted a request to the business core but failed to get a response. It is important to note that the 504 code does not represent a request failure, but is unknown. It is very likely that it has already been executed, and it is possible that the execution will fail and further confirmation is needed.
 - Each interface may throw an exception. The exception response format is as follows:
@@ -72,7 +71,7 @@ ACCESS-SIGN value generation rules:
 - Method is the request method, all letters are capitalized: GET/POST
 - requestPath is the request interface path, for example: /api/exchange/v2/market/orderBook
 - body is the string of the request body. The GET request has no body information to omit; the POST request has a body information JSON string, such as {"symbol": "BTCUSDT", "order_id": "7440"}
-- secket is generated when the user applies for the API.
+- secret is generated when the user applies for the API.
 
 Sample interface request:
 - GET protocol interface in two cases:
@@ -247,8 +246,8 @@ Return field description:
 Name | Type | Description
 --- | --- | ---  
 symbol | string | currency pair name, such as BTC/USDT  
-baseAsset | string | pricing currency BTC  
-quoteAsset | string | Trading Currency USDT  
+baseAsset | string | Trading currency BTC  
+quoteAsset | string | pricing Currency USDT  
 pricePrecision | string | Price accuracy  
 amountPrecision | string | quantity accuracy  
 takerFeeRate | string | taker fee  
@@ -346,8 +345,8 @@ Return field description:
 Name | Type | Description
 ---|---|---
 symbol | string | currency pair name, such as BTC/USDT
-baseAsset | string | pricing currency BTC
-quoteAsset | string | Trading Currency USDT
+baseAsset | string | Trading currency BTC  
+quoteAsset | string | pricing Currency USDT 
 pricePrecision | string | Price accuracy
 amountPrecision | string | quantity accuracy
 takerFeeRate | string | taker fee
@@ -1220,8 +1219,8 @@ Return field description:
 Name | Type | Description
 ---|---|---
 orderId | string | Order Id
-baseAsset | string | base currency, such as BTC
-quoteAsset | string | Trading currency, such as USDT
+baseAsset | string | Trading currency BTC  
+quoteAsset | string | pricing Currency USDT 
 orderDirection | string | direction
 quantity | string | order quantity
 fillQuantity | string | Number of transactions
@@ -1314,8 +1313,8 @@ Return field description:
 Name | Type | Description
 ---|---|---
 orderId | string | Order Id
-baseAsset | string | base currency, such as BTC
-quoteAsset | string | Trading currency, such as USDT
+baseAsset | string | Trading currency BTC  
+quoteAsset | string | pricing Currency USDT 
 orderDirection | string | direction
 quantity | string | order quantity
 amount | string | order amount
@@ -1403,8 +1402,8 @@ Return field description:
 Name | Type | Description  
 ---|---|---
 orderId | string | Order Id  
-baseAsset | string | base currency, such as BTC  
-quoteAsset | string | Trading currency, such as USDT
+baseAsset | string | Trading currency BTC  
+quoteAsset | string | pricing Currency USDT 
 orderDirection | string | Direction, 1: Buy 2: Buy 
 quantity | string | order quantity
 amount | string | order amount
@@ -1649,7 +1648,6 @@ Error code | message
 10009 | System error
 100011 | Invalid sign
 100012 |api verification failed
-
 
 
 
