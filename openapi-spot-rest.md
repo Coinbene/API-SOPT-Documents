@@ -33,7 +33,6 @@
 - 所有时间、时间戳均为UNIX时间，单位为毫秒
 - HTTP 4XX 错误码用于指示错误的请求内容、行为、格式。
 - HTTP 429 错误码表示警告访问频次超限，即将被封IP
-- HTTP 418 表示收到429后继续访问，于是被封了。
 - HTTP 5XX 错误码用于指示Coinbene服务侧的问题。
 - HTTP 504 表示API服务端已经向业务核心提交了请求但未能获取响应，特别需要注意的是504代码不代表请求失败，而是未知。很可能已经得到了执行，也有可能执行失败，需要做进一步确认。
 - 每个接口都有可能抛出异常，异常响应格式如下：
@@ -63,12 +62,12 @@
 - 所有请求都应该含有application/json类型内容，并且是有效的JSON。
 
 ACCESS-SIGN的值生成规则：
-- 按照timestamp + method + requestPath + body字符串（+表示字符串连接），以及secret，使用HMAC SHA256方法加密，最后把加密串的字节数组转成字符串返回。
+- 按照timestamp + method + requestPath + body字符串（+表示字符串连接），以及secret，使用HMAC SHA256方法加密，最后把加密串的字节数组转成十六进制字符串返回。
 - 其中，timestamp的值与ACCESS-TIMESTAMP请求头相同，必须是UTC时区Unix时间戳的十进制秒数或ISO8601标准的时间格式，精确到毫秒。
 - Method是请求方法，字母全部大写：GET/POST
 - requestPath是请求接口路径，例如：/api/exchange/v2/market/orderBook
 - body是指请求主体的字符串。GET请求没有body信息可省略；POST请求有body信息JSON串，例如{"symbol":"BTCUSDT","order_id":"7440"}
-- secket为用户申请API时所生成的。
+- secret为用户申请API时所生成的。
 
 接口请求样例：
 - GET协议接口两种情况: 
@@ -240,12 +239,12 @@ HTTP GET /api/exchange/v2/market/tradePair/list
 名称   | 类型  | 说明
 ---|---|---
 symbol   | string | 币对名称, 如BTC/USDT
-baseAsset   | string | 计价货币 BTC
-quoteAsset   | string | 交易货币 USDT
+baseAsset   | string | 交易货币  BTC
+quoteAsset   | string | 计价货币 USDT
 pricePrecision   | string | 价格精度
 amountPrecision   | string | 数量精度
-takerFeeRate   | string | taker手续费
-makerFeeRate   | string | maker手续费
+takerFeeRate   | string | taker手续费率
+makerFeeRate   | string | maker手续费率
 minAmount   | string | 委托数量最小限制
 priceFluctuation   | string | 价格波动限制
 site   | string | 所属站点
@@ -339,12 +338,12 @@ symbol   | string |是  | 币对名称，如BTC/USDT
 名称   | 类型  | 说明
 ---|---|---
 symbol   | string | 币对名称,如BTC/USDT
-baseAsset   | string | 计价货币 BTC
-quoteAsset   | string | 交易货币 USDT
+baseAsset   | string |  交易货币 BTC
+quoteAsset   | string | 计价货币 USDT
 pricePrecision   | string | 价格精度
 amountPrecision   | string | 数量精度
-takerFeeRate   | string | taker手续费
-makerFeeRate   | string | maker手续费
+takerFeeRate   | string | taker手续费率
+makerFeeRate   | string | maker手续费率
 minAmount   | string | 最新成交数量
 priceFluctuation   | string | 价格波动限制
 site   | string | 所属站点
@@ -1220,8 +1219,8 @@ latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，
 名称   | 类型  | 说明
 ---|---|---
 orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
+baseAsset   | string | 交易货币，如BTC
+quoteAsset   | string | 计价货币，如USDT
 orderDirection   | string | 方向
 quantity   | string | 订单数量
 filledQuantity   | string | 已成交数量
@@ -1327,8 +1326,8 @@ latestOrderId      | string | 否 | 订单id，分页使用，默认值为空，
 名称   | 类型  | 说明
 ---|---|---
 orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
+baseAsset   | string | 交易货币，如BTC
+quoteAsset   | string | 计价货币，如USDT
 orderDirection   | string | 方向
 quantity   | string | 订单数量
 amount   | string | 订单金额
@@ -1415,8 +1414,8 @@ orderId      | string | 是 | 委托单ID
 名称   | 类型  | 说明
 ---|---|---
 orderId   | string | 订单Id
-baseAsset   | string | 基础货币，如BTC
-quoteAsset   | string | 交易货币，如USDT
+baseAsset   | string | 交易货币，如BTC
+quoteAsset   | string | 计价货币，如USDT
 orderDirection   | string | 方向，1：买 2：买
 quantity   | string | 订单数量
 amount   | string | 订单金额
