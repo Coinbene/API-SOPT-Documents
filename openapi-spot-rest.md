@@ -518,7 +518,7 @@ Headers:
 	Content-Type: application/json; charset=UTF-8
 	Cookie: locale=zh_CN
 Body: 
-preHash: 2019-06-18T08:03:39.250ZGET/api/exchange/v2/market/ticker/info?symbol=BTC%2FUSDT
+preHash: 2019-06-18T08:03:39.250ZGET/api/exchange/v2/market/ticker/one?symbol=BTC%2FUSDT
 
 
 Response:
