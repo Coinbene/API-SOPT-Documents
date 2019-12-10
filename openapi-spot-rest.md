@@ -386,7 +386,7 @@ Response:
 ```
 获取交易所现货深度列表
 限速规则：6次/1秒
-HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
+HTTP GET /api/exchange/v2/market/orderBook
 ```
 
 请求参数：
@@ -406,7 +406,7 @@ bids   | array | 买方深度，[档位价格，数量]
 
 ```
 Request:
-Url: http://域名/api/exchange/v2/market/orderBook?symbol=ETH/USDT&depth=10
+Url: http://域名/api/exchange/v2/market/orderBook?symbol=BTC%2FUSDT&depth=5
 Method: GET
 
 Url: http://172.20.22.50:8604/api/exchange/v2/market/orderBook?symbol=BTC%2FUSDT&depth=5
@@ -1683,7 +1683,6 @@ Response:
 3023 | 委托单订单类型值错误
 3024 | 委托单订单数量值错误
 3025 | 委托单订单价格值错误
-
 
 
 
