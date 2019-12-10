@@ -413,7 +413,7 @@ bid | array | buyer depth, [gear price, quantity]
 
 ```
 Request:
-Url: http://domain/api/exchange/v2/market/orderBook?symbol=ETH/USDT&depth=10
+Url: http://domain/api/exchange/v2/market/orderBook?symbol=BTC%2FUSDT&depth=5
 Method: GET
 
 Url: http://172.20.22.50:8604/api/exchange/v2/market/orderBook?symbol=BTC%2FUSDT&depth=5
@@ -527,7 +527,7 @@ ACCESS-TIMESTAMP: 2019-06-18T08:03:39.250Z
 Content-Type: application/json; charset=UTF-8
 Cookie: locale=zh_CN
 Body:
-preHash: 2019-06-18T08:03:39.250ZGET/api/exchange/v2/market/ticker/info?symbol=BTC%2FUSDT
+preHash: 2019-06-18T08:03:39.250ZGET/api/exchange/v2/market/ticker/one?symbol=BTC%2FUSDT
 
 
 Response:
@@ -1236,7 +1236,7 @@ fee | string | handling fee
 
 ```
 Request:
-Url: http://domain/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT&pageNum=1&pageSize=3
+Url: http://domain/api/exchange/v2/order/openOrders?symbol=BTC%2FUSDT
 Method: GET
 Headers:
 Accept: application/json
@@ -1649,7 +1649,6 @@ Error code | message
 10009 | System error
 100011 | Invalid sign
 100012 |api verification failed
-
 
 
 
