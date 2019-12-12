@@ -223,7 +223,7 @@ Def sign(message, secret):
 
 Class TestUtil(unittest.TestCase):
     Def test_sign(self):
-        Sn = sign("2019-05-25T03:20:30.362ZGET/api/spot/v2/account/info", "9daf13ebd76c4f358fc885ca6ede5e27")
+        Sn = sign("2019-05-25T03:20:30.362ZGET/api/swap/v2/account/info", "9daf13ebd76c4f358fc885ca6ede5e27")
         self.assertEqual(sn, "a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e51e232aa2")
 
 
