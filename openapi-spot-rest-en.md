@@ -1643,11 +1643,55 @@ Error code | message
 10003 | "ACCESS_TIMESTAMP" cannot be empty
 10005 | Invalid ACCESS_TIMESTAMP
 10006 | Invalid ACCESS_KEY
-10007 | Invalid Content_Type, please use the "application/json" format
+10007 | Invalid Content_Type, please use "application / json" format
 10008 | Request timestamp expired
-10009 | System error
-100011 | Invalid sign
-100012 |api verification failed
+10009 | System Error
+3002 | Completed, order cancellation failed
+3004 | Order does not exist, order cancellation failed
+3008 | Illegal trading pair
+3010 | Bid price cannot be higher than current price {0}%
+3011 | Ask price cannot be lower than current price {0}%
+3012 | Order Price Up To Decimal Places {0}
+3013 | Orders with up to decimal places {0}
+3014 | Min purchase {0}
+3015 | Sell at least {0}
+3016 | Insufficient or frozen balance
+3017 | Sell suspended, resume time, subject to announcement
+3018 | User does not have permission to trade
+3019 | The daily limit price for the current {0} hour cycle is {1}, the purchase price cannot be higher than the daily limit price, please adjust the purchase price
+3020 | The current limit price of the {0} hour cycle is {1}, the selling price cannot be lower than the limit price, please adjust the selling price
+3021 | Plan order can only be cancelled without trigger
+3022 | Delegate Type Error
+3023 | Incorrect account type
+3024 | Trading Pair Error
+3025 | Transaction is wrong
+3026 | Delegate source error
+3027 | Trigger price error
+3028 | Trigger price up to decimal places {0}
+3029 | Buy price cannot be higher than trigger price {0}%
+3030 | Sell price cannot be lower than trigger price {0}%
+3031 | Order price error
+3032 | Total Commission Error
+3033 | Total number of decimal places for commission {0}
+3034 | Order volume error
+3035 | The number of advanced pending orders cannot exceed {0}
+3036 | Trigger price should be higher than the latest transaction price
+3037 | Trigger price should be lower than the latest transaction price
+3038 | OCO Limit Error
+3039 | OCO Limit Price Up To Decimal Places {0}
+3040 | OCO limit price should be higher than the latest transaction price
+3041 | OCO limit price should be lower than the latest transaction price
+3042 | No account found
+3043 | Delegation does not exist
+3044 | Order number error
+3045 | The number of batch orders cannot exceed {0}
+3046 | Account freeze failed
+3047 | Query account failed
+3048 | Trading pair has no limit
+3049 | The number of iceberg commissioned impressions must be greater than 0
+3050 | Querying the daily limit price failed
+3055 | Buy price cannot be lower than trigger price {0}%
+3056 | Sell price cannot be higher than trigger price {0}%
 
 
 
