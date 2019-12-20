@@ -1605,29 +1605,36 @@ data | string | Undo Order Id
 Request:
 Url: http://domain/api/exchange/v2/order/batchCancel
 Method: POST
-Headers:
+Headers: 
 Accept: application/json
-ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
-ACCESS-SIGN: 29b7636a3732fdbbcdde4144537faef3b1da1ed1f72f90552ccbf9b44bd79f12
-ACCESS-TIMESTAMP: 2019-06-13T03:28:11.204Z
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: f485d03ee462a717de28f465225a90b226c3d7c08e5ce9b36c42f41e635dbdaf
+ACCESS-TIMESTAMP: 2019-12-20T03:21:50.580Z
 Content-Type: application/json; charset=UTF-8
-Cookie: locale=zh_CN
-Body: {"orderIds":["578639816552972288","578639902896914432"]}
-preHash: 2019-06-13T03:28:11.204ZPOST/api/exchange/v2/order/batchCancel{"orderIds":["578639816552972288","578639902896914432"]}
+Cookie: locale=en_US
+Body: {"orderIds":["1980983481458700288","1980983581337661440","1924511943331438592"]}
+preHash: 2019-12-20T03:21:50.580ZPOST/api/exchange/v2/order/batchCancel{"orderIds":["1980983481458700288","1980983581337661440","1924511943331438592"]}
 
 Response:
 {
-  "code": 200,
-  "data": [
-    {
-      "orderId": "578639816552972288",
-      "message": "The order does not exist, the cancellation of failure"
-    },
-    {
-      "orderId": "578639902896914432",
-      "message": "The order does not exist, the cancellation of failure"
-    }
-  ]
+    "code":200,
+    "data":[
+        {
+            "orderId":"1980983481458700288",
+            "code":"200",
+            "message":""
+        },
+        {
+            "orderId":"1980983581337661440",
+            "code":"200",
+            "message":""
+        },
+        {
+            "orderId":"1924511943331438592",
+            "code":"3004",
+            "message":"The order does not exist, the cancellation of failure"
+        }
+    ]
 }
 
 ```
