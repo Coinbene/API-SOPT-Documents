@@ -344,7 +344,7 @@ pricePrecision   | string | 价格精度
 amountPrecision   | string | 数量精度
 takerFeeRate   | string | taker手续费率
 makerFeeRate   | string | maker手续费率
-minAmount   | string | 最新成交数量
+minAmount   | string | 委托数量最小限制
 priceFluctuation   | string | 价格波动限制
 site   | string | 所属站点
 
