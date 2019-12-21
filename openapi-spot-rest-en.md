@@ -1090,8 +1090,8 @@ Name | Type | Required | Description
 ---|---|---|---  
 symbol | string | yes | currency pair name, such as BTC/USDT  
 direction | string | yes | direction, 1: buy 2: sell  
-price | string | yes | order price  
-quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold
+price | string | yes | order price, Market Order Type Assignment 0
+quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold, Market order when buying is value 0
 orderType | string | yes | 1: Limit price 2: Market price
 notional | string | no | Market Order Purchase Amount
 clientId | string | no | user request id, transparently returned to the user
@@ -1143,8 +1143,8 @@ Name | Type | Required | Description
 ---|---|---|---  
 symbol | string | yes | currency pair name, such as BTC/USDT  
 direction | string | yes | direction, 1: buy 2: sell  
-price | string | yes | order price  
-quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold
+price | string | yes | order price，Market Order Type Assignment 0
+quantity | string | yes | Quantity of limit order entrusted, quantity of market order sold，Market order when buying is value 0
 orderType | string | yes | 1: Limit price 2: Market price
 notional | string | no | Market Order Purchase Amount
 clientId | string | no | user request id, transparently returned to the user
