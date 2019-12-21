@@ -34,7 +34,6 @@
 - The response of all interfaces is in JSON format
 - All time and timestamp are UNIX time in milliseconds
 - The HTTP 4XX error code is used to indicate the content, behavior, and format of the error.
-- HTTP 429 error code indicates warning access frequency is exceeded, IP will be blocked
 - The HTTP 5XX error code is used to indicate problems on the Coinbene service side.
 - HTTP 504 indicates that the API server has submitted a request to the business core but failed to get a response. It is important to note that the 504 code does not represent a request failure, but is unknown. It is very likely that it has already been executed, and it is possible that the execution will fail and further confirmation is needed.
 - Each interface may throw an exception. The exception response format is as follows:
