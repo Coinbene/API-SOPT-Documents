@@ -1082,8 +1082,8 @@ HTTP POST/api/exchange/v2/order/place
 ---|---|---|---
 symbol      | string | 是 | 币对名称，如BTC/USDT，用"/"分割
 direction      | string | 是 | 方向，1:买 2:卖
-price      | string | 是 | 下单价格
-quantity      | string | 是 | 限价单委托数量，市价单卖出数量
+price      | string | 是 | 下单价格，市价单类型赋值0
+quantity      | string | 是 | 限价单委托数量，市价单卖出数量，市价单买入赋值0
 orderType      | string | 是 | 1:限价 2:市价
 notional      | string | 否 | 市价单买入金额
 clientId      | string | 否 | 用户请求id，透传返回给用户
