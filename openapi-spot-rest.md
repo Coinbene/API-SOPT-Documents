@@ -1463,7 +1463,8 @@ Response:
     "makerFeeRate": "0.001", 
     "orderStatus": "Cancelled", 
     "orderTime": "2019-06-12T09:39:27.0Z", 
-    "totalFee": "0"
+    "totalFee": "0",
+    "orderPrice": "8000.1"
   }
 }
 
