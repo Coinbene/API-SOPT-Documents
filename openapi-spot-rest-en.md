@@ -1265,7 +1265,8 @@ Response:
       "orderPrice": "10", 
       "orderStatus": "Open",
       "orderTime": "2019-06-13T02:41:24.0Z",
-      "totalFee": "0"
+      "totalFee": "0",
+      "orderPrice": "8000.1"
     },
     {
       "orderId": "1911862547074723840",
@@ -1281,7 +1282,8 @@ Response:
       "orderPrice": "10", 
       "orderStatus": "Open",
       "orderTime": "2019-06-12T09:39:12.0Z",
-      "totalFee": "0"
+      "totalFee": "0",
+      "orderPrice": "8000.1"
     }
   ]
 }
@@ -1359,7 +1361,8 @@ Response:
       "orderPrice": "10", 
       "orderStatus": "Filled",
       "orderTime": "2019-06-13T03:27:38.0Z",
-      "totalFee": "3.979557"
+      "totalFee": "3.979557",
+      "orderPrice": "8000.1"
     },
     {
       "orderId": "1911862608898764800",
@@ -1375,7 +1378,8 @@ Response:
       "orderPrice": "10", 
       "orderStatus": "Cancelled",
       "orderTime": "2019-06-12T09:39:27.0Z",
-      "totalFee": "0"
+      "totalFee": "0",
+      "orderPrice": "8000.1"
     }
   ]
 }
@@ -1446,7 +1450,8 @@ Response:
     "makerFeeRate": "0.001",
     "orderStatus": "Cancelled",
     "orderTime": "2019-06-12T09:39:27.0Z",
-    "totalFee": "0"
+    "totalFee": "0",
+    "orderPrice": "8000.1"
   }
 }
 
