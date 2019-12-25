@@ -137,7 +137,7 @@ preHash: 2019-06-13T11:27:14.493ZPOST/api/exchange/v2/order/place{"symbol":"BTC/
 ```
 源串：2019-05-25T03:20:30.362ZGET/api/spot/v2/account/info
 secret：9daf13ebd76c4f358fc885ca6ede5e27
-生成sign串：a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e51e232aa2
+生成sign串：da496b6d235c6bb76015eb660c3457958d2b26637a28937cd58d4329d588fb05
 
 样例代码（Java版本）：
 **
