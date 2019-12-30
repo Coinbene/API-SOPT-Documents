@@ -1699,7 +1699,6 @@ Error code | message
 3046 | Account freeze failed
 3047 | Query account failed
 3048 | Trading pair has no limit
-3049 | The number of iceberg commissioned impressions must be greater than 0
 3050 | Querying the daily limit price failed
 3055 | Buy price cannot be lower than trigger price {0}%
 3056 | Sell price cannot be higher than trigger price {0}%
