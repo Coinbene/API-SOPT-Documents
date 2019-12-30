@@ -1126,7 +1126,7 @@ Response:
 ### 私有接口-批量下单
 
 ```
-按用户输入进行下单操作
+按用户输入进行批量下单操作
 限速规则：3次/1秒
 HTTP POST/api/exchange/v2/order/batchPlaceOrder
 ```
@@ -1195,7 +1195,7 @@ Response:
 ### 私有接口-查询当前委托挂单列表
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行当前委托挂单列表查询，
 限速规则：3次/1秒
 HTTP GET/api/exchange/v2/order/openOrders
 ```
@@ -1306,7 +1306,7 @@ Response:
 ### 私有接口-查询历史委托单列表
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行历史委托单列表查询，
 限速规则：3次/1秒
 HTTP GET/api/exchange/v2/order/closedOrders
 ```
@@ -1402,7 +1402,7 @@ Response:
 ### 私有接口-查询指定订单信息
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行指定订单查询，
 限速规则：6次/1秒
 HTTP GET/api/exchange/v2/order/info
 ```
@@ -1474,7 +1474,7 @@ Response:
 ### 私有接口-查询订单成交明细列表
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行订单成交明细列表查询，
 限速规则：3次/1秒
 HTTP GET/api/exchange/v2/order/trade/fills
 ```
