@@ -1561,7 +1561,7 @@ Response:
 ### 私有接口-撤销指定委托单
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行订单撤销，
 限速规则：6次/1秒
 HTTP POST /api/exchange/v2/order/cancel
 ```
@@ -1602,7 +1602,7 @@ Response:
 ### 私有接口-批量撤销委托单
 
 ```
-按用户请求进行订单列表查询，
+按用户请求进行订单批量撤销，
 限速规则：3次/1秒
 HTTP POST /api/exchange/v2/order/batchCancel
 ```
