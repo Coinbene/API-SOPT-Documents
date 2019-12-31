@@ -1032,7 +1032,7 @@ HTTP GET /api/exchange/v2/market/rate/list
 ---|---|---
 symbol   | string | 资产币对
 rate   | string | 对USD的利率
-timestamp   | string | 请求时间，国际时间
+timestamp   | string | 请求时间,国际时间
 
 ```
 Request:
