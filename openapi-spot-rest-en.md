@@ -1028,7 +1028,8 @@ Response:
 Get the exchange rate interface provided by the platform
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/exchange/v2/market/rate/list
-`` `
+
+```
 Request parameters:
 no
 
