@@ -953,6 +953,140 @@ Response:
 
 ```
 
+
+
+### Public Interface-Get Kline Data Information
+```
+Get Kline data information for different specified periods. The maximum amount of data for a single request is 200. If your chosen start / end time and time granularity result in exceeding the maximum amount of data for a single request, your request will only return 200 data. If you want to get enough granular data over a larger time frame, you need to make multiple requests with multiple start / end ranges.
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET /api/exchange/v2/market/instruments/candles
+```
+Request parameters:
+
+Name | Type | Required | Description
+--- | --- | --- | ---
+symbol | string | Yes | The name of the currency pair, such as BTC / USDT
+period | string | is | time period, values ​​are as follows ["1", "3", "5", "15", "30", "60", "120", "240", "360", "720 "," D "," W "," M "], which correspond to [1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, 1day, 1week, 1month]
+start | string | No | Specify the start time of the kline line, timestamp accurate to the second
+end | string | No | Specify kline line end time, timestamp accurate to seconds
+```
+start and end indicate that if only start is passed, then the kline data from the start time to the present is returned; if only end is passed, the kline data with the record start time to the end of the end is returned; if both start and end are not filled, the system is returned Save all kline data for the current cycle
+```
+```
+Description of the returned array format:
+[
+timestamp start time
+open price
+high price
+low lowest price
+close closing price
+volume
+]
+```
+
+```
+Request:
+Url: http://domain_name/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 11178e61aa0f571a1a70a51ea63ac38dd013200e5b069c6c6a535a40a161a9a0
+ACCESS-TIMESTAMP: 2019-12-16T09: 39: 57.086Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2019-12-16T09:39:57.086ZGET/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
+
+
+Response:
+{
+    "code": 200,
+    "data": [
+        [
+            "2019-12-15T00: 11: 00.000Z",
+            "100.1",
+            "100.1",
+            "100.1",
+            "100.1",
+            "0"
+        ],
+        [
+            "2019-12-15T00: 12: 00.000Z",
+            "100.1",
+            "100.1",
+            "100.1",
+            "100.1",
+            "0"
+        ]
+    ]
+}
+```
+ 
+### Public Interface-Get Exchange Rate
+```
+Get the exchange rate interface provided by the platform
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET /api/exchange/v2/market/rate/list
+`` `
+Request parameters:
+no
+
+
+Return field description:
+
+Name | Type | Description
+--- | --- | ---
+symbol | string | Asset Currency Pair
+rate | string | Interest Rate on USD
+timestamp | string | Request time, international time
+
+```
+Request:
+Url: http: //domain/api/exchange/v2/market/rate/list
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: ed9843787c351e10891cf91fc171506ff3fde81b638aba8619e8740808ea90ab
+ACCESS-TIMESTAMP: 2019-12-16T09: 41: 59.433Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2019-12-16T09:41:59.433ZGET/api/exchange/v2/market/rate/list
+
+
+Response:
+{
+    "code": 200,
+    "data": [
+        {
+            "symbol": "USD_USDT",
+            "rate": "1.0001",
+            "timestamp": "2019-12-16T09: 42: 00.248Z"
+        },
+        {
+            "symbol": "USD_CNY",
+            "rate": "7.0040",
+            "timestamp": "2019-12-16T09: 42: 00.248Z"
+        },
+        {
+            "symbol": "USD_KRW",
+            "rate": "1173.7900",
+            "timestamp": "2019-12-16T09: 42: 00.248Z"
+        },
+        {
+            "symbol": "USD_JPY",
+            "rate": "109.4700",
+            "timestamp": "2019-12-16T09: 42: 00.248Z"
+        }
+    ]
+}
+
+```
+
+
+
 ### Private Interface - Query all account information
 
 ```
