@@ -14,7 +14,6 @@
          * [公共接口-获取深度](#公共接口-获取深度)
          * [公共接口-获取指定的ticker信息](#公共接口-获取指定的ticker信息)
          * [公共接口-查询最新成交信息](#公共接口-查询最新成交信息)
-         * [公共接口-获取Kline数据信息](#公共接口-获取kline数据信息)
          * [公共接口-获取币的汇率](#公共接口-获取币的汇率)
          * [私有接口-查询全部账户信息](#私有接口-查询全部账户信息)
          * [私有接口-查询指定账户资产信息](#私有接口-查询指定账户资产信息)
@@ -948,76 +947,6 @@ Response:
 ```
 
 
-
-
-### 公共接口-获取Kline数据信息
-```
-获取指定不同周期的Kline数据信息, 单次请求的最大数据量是200。如果您选择的开始/结束时间和时间粒度导致超过单次请求的最大数据量，您的请求将只会返回200个数据。如果您希望在更大的时间范围内获取足够精细的数据，则需要使用多个开始/结束范围进行多次请求。
-限速规则：1次/1秒
-HTTP GET /api/exchange/v2/market/instruments/candles
-```
-请求参数：
-
-名称   | 类型  |是否必填  | 说明
----|---|---|---
-symbol   | string |是  | 币对名称，如BTC/USDT
-period   | string |是  | 时间周期, 值如下["1","3","5","15","30","60","120","240","360","720","D","W","M"]，分别对应[1min,3min,5min,15min,30min,1hour,2hour,4hour,6hour,12hour,1day,1week,1month]
-start   | string |否  | 指定kline线开始时间，时间戳 精确到秒
-end   | string |否  | 指定kline线结束时间，时间戳 精确到秒
-
-```
-start和end说明，如果只传start，那么返回start时间开始到现在的kline数据；如果只传end，则返回有记录开始时间到end结束的kline数据；如果start和end都不填，则返回系统保存的当前周期的所有kline数据
-```
-```
-返回数组格式说明：
-[
-timestamp 开始时间
-open    开盘价格
-high    最高价格
-low     最低价格
-close   收盘价格
-volume  交易量
-]
-```
-
-```
-Request:
-Url: http://域名/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
-Method: GET
-Headers: 
-Accept: application/json
-ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
-ACCESS-SIGN: 11178e61aa0f571a1a70a51ea63ac38dd013200e5b069c6c6a535a40a161a9a0
-ACCESS-TIMESTAMP: 2019-12-16T09:39:57.086Z
-Content-Type: application/json; charset=UTF-8
-Cookie: locale=en_US
-Body: 
-preHash: 2019-12-16T09:39:57.086ZGET/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
-
-
-Response:
-{
-    "code":200,
-    "data":[
-        [
-            "2019-12-15T00:11:00.000Z",
-            "100.1",
-            "100.1",
-            "100.1",
-            "100.1",
-            "0"
-        ],
-        [
-            "2019-12-15T00:12:00.000Z",
-            "100.1",
-            "100.1",
-            "100.1",
-            "100.1",
-            "0"
-        ]
-    ]
-}
-```
  
 ### 公共接口-获取币的汇率
 ```
