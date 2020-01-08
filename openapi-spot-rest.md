@@ -517,6 +517,70 @@ Response:
 
 ```
  
+ 
+### 公共接口-获取指定的ticker信息
+
+```
+获取交易所现货全部ticker的最新成交价、买一价、卖一价和24交易量
+限速规则：1次/1秒
+HTTP GET /api/exchange/v2/market/ticker/list
+```
+请求参数：无
+
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+symbol         | string | 币对名称，如BTC/USDT
+latestPrice           | string | 最新价
+bestAsk            | string | 卖一价
+bestBid            | string | 买一价
+high24h        | string | 24h最高价
+low24h         | string | 24h最低价
+volume24h      | string | 24h成交量
+
+```
+Request:
+Url: http://域名/api/exchange/v2/market/ticker/list
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+	ACCESS-SIGN: c085be146e16a508b6d177a56c05b695f92579db41642ee7c80e385579a08123
+	ACCESS-TIMESTAMP: 2019-12-08T08:51:50.508Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=zh_CN
+Body: 
+preHash: 2019-12-08T08:51:50.508ZGET/api/exchange/v2/market/ticker/list
+
+
+Response:
+{
+  "code": 200, 
+  "data": [{
+        "symbol":"BTCUSDT",
+        "latestPrice":"1263.17",
+        "bestBid":"1263.15",
+        "bestAsk":"1263.17",
+        "high24h":"1263.17",
+        "low24h":"1263.17",
+        "volume24h":"190226.215235"
+    },
+    {
+        "symbol":"ETHUSDT",
+        "latestPrice":"63.17",
+        "bestBid":"63.15",
+        "bestAsk":"63.17",
+        "high24h":"63.17",
+        "low24h":"63.17",
+        "volume24h":"1906.12"
+    }
+    ]
+}
+```
+
+ 
 
 ### 公共接口-获取指定的ticker信息
 
@@ -562,7 +626,7 @@ Response:
 {
   "code": 200, 
   "data": {
-        "symbol":"BTC/USDT",
+        "symbol":"BTCUSDT",
         "latestPrice":"63.17",
         "bestBid":"63.15",
         "bestAsk":"63.17",
