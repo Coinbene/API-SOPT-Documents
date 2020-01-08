@@ -492,6 +492,71 @@ Response:
 ```
  
 
+### Public interface - Get the specified all ticker information
+
+```
+
+Get the latest transaction price, buy one price, sell one price and 24 transaction volume of the exchange all ticker
+Speed ​​limit rule: 6 times / 1 second
+HTTP GET /api/exchange/v2/market/ticker/list
+```
+
+
+Request parameters: none
+
+
+Return field description:
+
+Name | Type | Description
+---|---|---
+symbol | string | currency pair name, such as BTCUSDT
+latestPrice | string | Latest price
+bestAsk | string | Sell one price
+bestBid | string | Buy one price
+high24h | string | 24h highest price
+low24h | string | 24h lowest price
+volume24h | string | 24h volume
+
+```
+Request:
+Url: http://域名/api/exchange/v2/market/ticker/list
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 978672ddedbd1c5340a83a277b2ac654
+	ACCESS-SIGN: c085be146e16a508b6d177a56c05b695f92579db41642ee7c80e385579a08123
+	ACCESS-TIMESTAMP: 2019-12-08T08:51:50.508Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=zh_CN
+Body: 
+preHash: 2019-12-08T08:51:50.508ZGET/api/exchange/v2/market/ticker/list
+
+
+Response:
+{
+  "code": 200, 
+  "data": [{
+        "symbol":"BTCUSDT",
+        "latestPrice":"1263.17",
+        "bestBid":"1263.15",
+        "bestAsk":"1263.17",
+        "high24h":"1263.17",
+        "low24h":"1263.17",
+        "volume24h":"190226.215235"
+    },
+    {
+        "symbol":"ETHUSDT",
+        "latestPrice":"63.17",
+        "bestBid":"63.15",
+        "bestAsk":"63.17",
+        "high24h":"63.17",
+        "low24h":"63.17",
+        "volume24h":"1906.12"
+    }
+    ]
+}
+```
+
 
 ### Public interface - Get the specified ticker information
 
@@ -510,7 +575,7 @@ Return field description:
 
 Name | Type | Description
 ---|---|---
-symbol | string | currency pair name, such as BTC/USDT
+symbol | string | currency pair name, such as BTCUSDT
 latestPrice | string | Latest price
 bestAsk | string | Sell one price
 bestBid | string | Buy one price
@@ -537,7 +602,7 @@ Response:
 {
   "code": 200,
   "data": {
-        "symbol": "BTC/USDT",
+        "symbol": "BTCUSDT",
         "latestPrice": "63.17",
         "bestBid": "63.15",
         "bestAsk": "63.17",
