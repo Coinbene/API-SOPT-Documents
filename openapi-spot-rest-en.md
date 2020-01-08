@@ -4,7 +4,6 @@
 
 [中文版本](https://github.com/Coinbene/API-SPOT-v2-Documents/blob/master/openapi-spot-rest.md)
 
-
    * [coinbene-spot-rest Spot openapi rest interface description](#coinbene-spot-rest-spot-openapi-rest-interface-description)
       * [Basic Information](#basic-information)
       * [restriction of visit](#restriction-of-visit)
@@ -14,6 +13,7 @@
          * [Public Interface - Get all transaction configuration information](#public-interface---get-all-transaction-configuration-information)
          * [Public interface - Get the specified transaction pair configuration information](#public-interface---get-the-specified-transaction-pair-configuration-information)
          * [Public interface - Get depth](#public-interface---get-depth)
+         * [Public interface - Get the specified all ticker information](#public-interface---get-the-specified-all-ticker-information)
          * [Public interface - Get the specified ticker information](#public-interface---get-the-specified-ticker-information)
          * [Public Interface - Check the latest transaction information](#public-interface---check-the-latest-transaction-information)
          * [Public Interface-Get Kline Data Information](#public-interface-get-kline-data-information)
@@ -29,7 +29,6 @@
          * [Private Interface - Undo the specified order](#private-interface---undo-the-specified-order)
          * [Private Interface - Bulk Revocation Order](#private-interface---bulk-revocation-order)
       * [Error Code Summary](#error-code-summary)
-      
       
 
 ## Basic Information
