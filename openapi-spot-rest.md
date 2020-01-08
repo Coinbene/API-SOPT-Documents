@@ -476,7 +476,42 @@ Response:
 
 
 
+Request:
+Url: http://域名/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
+Method: GET
+Headers: 
+Accept: application/json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 11178e61aa0f571a1a70a51ea63ac38dd013200e5b069c6c6a535a40a161a9a0
+ACCESS-TIMESTAMP: 2019-12-16T09:39:57.086Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=en_US
+Body: 
+preHash: 2019-12-16T09:39:57.086ZGET/api/exchange/v2/market/instruments/candles?symbol=BCH%2FUSDT&period=1
 
+
+Response:
+{
+    "code":200,
+    "data":[
+        [
+            "2019-12-15T00:11:00.000Z",
+            "100.1",
+            "100.1",
+            "100.1",
+            "100.1",
+            "0"
+        ],
+        [
+            "2019-12-15T00:12:00.000Z",
+            "100.1",
+            "100.1",
+            "100.1",
+            "100.1",
+            "0"
+        ]
+    ]
+}
 
 ```
  
@@ -1793,7 +1828,6 @@ Response:
 3050 | 查询涨跌停价格失败
 3055 | 买入价格不可低于触发价{0}%
 3056 | 卖出价格不可高于触发价{0}%
-
 
 
 
