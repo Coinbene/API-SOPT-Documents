@@ -1611,7 +1611,7 @@ Name | Type | Description
 orderId | string | Order Id  
 baseAsset | string | Trading currency BTC  
 quoteAsset | string | pricing Currency USDT 
-orderDirection | string | Direction, 1: Buy 2: Buy 
+orderDirection | string | Direction 
 quantity | string | order quantity
 amount | string | order amount
 filledAmount | string |
@@ -1644,7 +1644,7 @@ Response:
     "orderId": "1911862608898764800",
     "baseAsset": "BTC",
     "quoteAsset": "USDT",
-    "orderDirection": "2",
+    "orderDirection": "buy",
     "quantity": "54",
     "amount": "3645",
     "filledAmount": "0",
