@@ -515,6 +515,8 @@ bestBid | string | Buy one price
 high24h | string | 24h highest price
 low24h | string | 24h lowest price
 volume24h | string | 24h volume
+chg24h | string | 24h Ups and downs
+chg0h | string | 0h Ups and downs
 
 ```
 Request:
@@ -541,7 +543,9 @@ Response:
         "bestAsk":"1263.17",
         "high24h":"1263.17",
         "low24h":"1263.17",
-        "volume24h":"190226.215235"
+        "volume24h":"190226.215235",
+	"chg24h":"2.12%",
+        "chg0h":"0.21%"
     },
     {
         "symbol":"ETHUSDT",
@@ -550,7 +554,9 @@ Response:
         "bestAsk":"63.17",
         "high24h":"63.17",
         "low24h":"63.17",
-        "volume24h":"1906.12"
+        "volume24h":"1906.12",
+	"chg24h":"3.12%",
+        "chg0h":"1.21%"
     }
     ]
 }
@@ -581,6 +587,8 @@ bestBid | string | Buy one price
 high24h | string | 24h highest price
 low24h | string | 24h lowest price
 volume24h | string | 24h volume
+chg24h | string | 24h Ups and downs
+chg0h | string | 0h Ups and downs
 
 ```
 Request:
@@ -607,7 +615,9 @@ Response:
         "bestAsk": "63.17",
         "high24h": "63.17",
         "low24h": "63.17",
-        "volume24h":"1906.215235"
+        "volume24h":"1906.215235",
+	"chg24h":"2.12%",
+        "chg0h":"0.21%"
     }
 }
 ```
