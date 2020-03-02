@@ -540,6 +540,8 @@ bestBid            | string | 买一价
 high24h        | string | 24h最高价
 low24h         | string | 24h最低价
 volume24h      | string | 24h成交量
+chg24h      | string | 24h涨跌幅
+chg0h      | string | 0h涨跌幅
 
 ```
 Request:
@@ -566,7 +568,9 @@ Response:
         "bestAsk":"1263.17",
         "high24h":"1263.17",
         "low24h":"1263.17",
-        "volume24h":"190226.215235"
+        "volume24h":"190226.215235",
+	"chg24h":"4.12%",
+        "chg0h":"1.21%"
     },
     {
         "symbol":"ETHUSDT",
@@ -575,7 +579,9 @@ Response:
         "bestAsk":"63.17",
         "high24h":"63.17",
         "low24h":"63.17",
-        "volume24h":"1906.12"
+        "volume24h":"1906.12",
+	"chg24h":"2.12%",
+        "chg0h":"0.21%"
     }
     ]
 }
@@ -607,6 +613,8 @@ bestBid            | string | 买一价
 high24h        | string | 24h最高价
 low24h         | string | 24h最低价
 volume24h      | string | 24h成交量
+chg24h      | string | 24h涨跌幅
+chg0h      | string | 0h涨跌幅
 
 ```
 Request:
@@ -633,7 +641,9 @@ Response:
         "bestAsk":"63.17",
         "high24h":"63.17",
         "low24h":"63.17",
-        "volume24h":"1906.215235"
+        "volume24h":"1906.215235",
+	"chg24h":"2.12%",
+        "chg0h":"0.21%"
     }
 }
 ```
