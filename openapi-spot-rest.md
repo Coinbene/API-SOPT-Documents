@@ -1914,6 +1914,7 @@ Response:
 错误代码     |  message
 ---|:---
 429 |请求太频繁
+430 | 该资产暂不支持API用户交易
 10001 | "ACCESS_KEY"不能为空
 10002 | "ACCESS_SIGN"不能为空
 10003 | "ACCESS_TIMESTAMP"不能为空
