@@ -1863,6 +1863,7 @@ Response:
 Error code | message
 ---|:---
 429 | Requests are too frequent
+430 | API user transactions are not supported at this time
 10001 | "ACCESS_KEY" cannot be empty
 10002 | "ACCESS_SIGN" cannot be empty
 10003 | "ACCESS_TIMESTAMP" cannot be empty
