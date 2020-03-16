@@ -1880,56 +1880,56 @@ Error code | message
 11004 | Order price accuracy does not match
 11005 | The currency pair has not yet opened leverage
 11007 | Currency pair does not match asset
-3002 | Completed, order cancellation failed
-3004 | Order does not exist, order cancellation failed
-3008 | Illegal trading pair
-3010 | Bid price cannot be higher than current price {0}%
-3011 | Ask price cannot be lower than current price {0}%
-3012 | Order Price Up To Decimal Places {0}
-3013 | Orders with up to decimal places {0}
-3014 | Min purchase {0}
-3015 | Sell at least {0}
-3016 | Insufficient or frozen balance
-3017 | Sell suspended, resume time, subject to announcement
-3018 | User does not have permission to trade
-3019 | The daily limit price for the current {0} hour cycle is {1}, the purchase price cannot be higher than the daily limit price, please adjust the purchase price
-3020 | The current limit price of the {0} hour cycle is {1}, the selling price cannot be lower than the limit price, please adjust the selling price
-3021 | Plan order can only be cancelled without trigger
-3022 | Delegate Type Error
-3023 | Incorrect account type
-3024 | Trading Pair Error
-3025 | Transaction is wrong
-3026 | Delegate source error
-3027 | Trigger price error
-3028 | Trigger price up to decimal places {0}
-3029 | Buy price cannot be higher than trigger price {0}%
-3030 | Sell price cannot be lower than trigger price {0}%
-3031 | Order price error
-3032 | Total Commission Error
-3033 | Total number of decimal places for commission {0}
-3034 | Order volume error
-3035 | The number of advanced pending orders cannot exceed {0}
-3036 | Trigger price should be higher than the latest transaction price
-3037 | Trigger price should be lower than the latest transaction price
-3038 | OCO Limit Error
-3039 | OCO Limit Price Up To Decimal Places {0}
-3040 | OCO limit price should be higher than the latest transaction price
-3041 | OCO limit price should be lower than the latest transaction price
-3042 | No account found
-3043 | Delegation does not exist
-3044 | Order number error
-3045 | The number of batch orders cannot exceed {0}
-3046 | Account freeze failed
-3047 | Query account failed
-3048 | Trading pair has no limit
-3050 | Querying the daily limit price failed
-3055 | Buy price cannot be lower than trigger price {0}%
-3056 | Sell price cannot be higher than trigger price {0}%
-
-
-
-
-
-
-
+51800| The transaction has been traded, failure
+51801| The order does not exist, the cancellation of failure
+51802| TradePair Wrong
+51803| Buy Price must not be more than current price {0}%
+51804| Sell price must not be less than current price {0}%
+51805| Order price Most decimal point {0}
+51806| Order quantity Most decimal point {0}
+51807| Buy at least {0}
+51808| Sell at least {0}
+51809| Insufficient balance or account is frozen
+51810| selling not supported
+51811| Sorry, you do not have the authority to trade.
+51812| The buy price exceeds the limit of {1} within current {0}-hour cycle. Please adjust the price.
+51813| The sell price exceeds the limit of {1} within current {0}-hour cycle. Please adjust the price.
+51814| Schedule Order can only be cancelled before triggering
+51815| Order Type Error
+51816| Account Type Error
+51817| Trade Pair Error
+51818| Trade Orientation Error
+51819| Order Interface Error
+51820| Trigger Price Error
+51821| Trigger price Most decimal point {0}
+51822| Purchase price shall not be higher than trigger price {0}%
+51823| Selling Price shall not be under Trigger Price{0}%
+51824| Order Price Error
+51825| Order Amount Error
+51826| Order amount Most decimal point {0}
+51827| Order Quantity Error
+51828| Quantity of senior open order can not exceed {0}
+51829| Trigger price shall be higher than the latest filled price
+51830| Trigger price shall be lower than the latest filled price
+51831| Limited Price Error
+51832| Limited price Most decimal point {0}
+51833| Limited price shall be higher than the latest filled price
+51834| Limited price shall be lower than the latest filled price
+51835| Account not found
+51836| Order does not exist
+51837| Order Number Error
+51838| Quantity of batch ordering can not exceed {0}
+51839| Account freezing failed
+51840| Account checking failed
+51841| Trade pair have no settings of price limit
+51842| Showing Quantity of Iceberg Order shall be greater than 0
+51843| Price limit checking failed
+51844| Start time error
+51845| End time error
+51846| Start time should be earlier than end time
+51847| Maximum download time period is {0} days
+51848| Purchase Price shall not be under Trigger Price {0}%
+51849| Selling price can not be higher than trigger price {0}%
+51850| The maximum number of download tasks is {0}
+51851| Start time: Only a specific time of the past 3 months is available
 
