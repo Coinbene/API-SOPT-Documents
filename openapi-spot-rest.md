@@ -62,7 +62,7 @@
 所有接口请求头必须包含以下内容：
 - ACCESS-KEY 字符串类型的API key
 - ACCESS-SIGN 使用Hex生成字符串返回，具体代码参考下面Java版本和Python版本代码
-- ACCESS-TIMESTAMP 发起请求的时间戳
+- ACCESS-TIMESTAMP 发起请求的时间戳，必须是UTC时区Unix时间戳的十进制秒数或ISO8601标准的时间格式，精确到毫秒
 - 所有请求都应该含有application/json类型内容，并且是有效的JSON。
 
 ACCESS-SIGN的值生成规则：
