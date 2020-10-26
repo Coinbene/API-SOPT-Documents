@@ -956,8 +956,8 @@ Response:
 
 ### 私有接口-下单
 
-```
 <font color='red'> 注意目前暂不支持, 请关注后续公告通知 </font>
+```
 按用户输入进行下单操作
 限速规则：6次/1秒
 HTTP POST/api/exchange/v2/order/place
