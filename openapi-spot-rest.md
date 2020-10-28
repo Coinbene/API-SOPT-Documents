@@ -31,9 +31,8 @@
 
 
 ## 基本信息
-- 本篇列出REST接口的baseurl: http://openapi-exchange.coinbene.com 或 https://openapi-exchange.coinbene.com
+- 本篇列出REST接口的baseurl: https://openapi-exchange.coinbene.com
 - 建议创建完API后，修改添加上自己服务器出口IP，进一步增强API安全性校验
-- 需要科学上网，国内用户建议机器绑定host，104.16.127.19 openapi-exchange.coinbene.com
 - 所有接口的响应都是JSON格式
 - 所有时间、时间戳均为UNIX时间，单位为毫秒
 - HTTP 4XX 错误码用于指示错误的请求内容、行为、格式。
