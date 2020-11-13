@@ -523,7 +523,7 @@ Response:
 {
   "code": 200, 
   "data": [{
-        "symbol":"BTCUSDT",
+        "symbol":"BTC/USDT",
         "latestPrice":"1263.17",
         "bestBid":"1263.15",
         "bestAsk":"1263.17",
@@ -534,7 +534,7 @@ Response:
         "chg0h":"1.21%"
     },
     {
-        "symbol":"ETHUSDT",
+        "symbol":"ETH/USDT",
         "latestPrice":"63.17",
         "bestBid":"63.15",
         "bestAsk":"63.17",
@@ -596,7 +596,7 @@ Response:
 {
   "code": 200, 
   "data": {
-        "symbol":"BTCUSDT",
+        "symbol":"BTC/USDT",
         "latestPrice":"63.17",
         "bestBid":"63.15",
         "bestAsk":"63.17",
