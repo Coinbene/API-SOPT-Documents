@@ -505,7 +505,7 @@ Return field description:
 
 Name | Type | Description
 ---|---|---
-symbol | string | currency pair name, such as BTCUSDT
+symbol | string | currency pair name, such as BTC/USDT
 latestPrice | string | Latest price
 bestAsk | string | Sell one price
 bestBid | string | Buy one price
@@ -534,7 +534,7 @@ Response:
 {
   "code": 200, 
   "data": [{
-        "symbol":"BTCUSDT",
+        "symbol":"BTC/USDT",
         "latestPrice":"1263.17",
         "bestBid":"1263.15",
         "bestAsk":"1263.17",
@@ -545,7 +545,7 @@ Response:
         "chg0h":"0.21%"
     },
     {
-        "symbol":"ETHUSDT",
+        "symbol":"ETH/USDT",
         "latestPrice":"63.17",
         "bestBid":"63.15",
         "bestAsk":"63.17",
@@ -577,7 +577,7 @@ Return field description:
 
 Name | Type | Description
 ---|---|---
-symbol | string | currency pair name, such as BTCUSDT
+symbol | string | currency pair name, such as BTC/USDT
 latestPrice | string | Latest price
 bestAsk | string | Sell one price
 bestBid | string | Buy one price
@@ -606,7 +606,7 @@ Response:
 {
   "code": 200,
   "data": {
-        "symbol": "BTCUSDT",
+        "symbol": "BTC/USDT",
         "latestPrice": "63.17",
         "bestBid": "63.15",
         "bestAsk": "63.17",
