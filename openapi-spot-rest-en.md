@@ -236,7 +236,7 @@ Class TestUtil(unittest.TestCase):
 
 ### Public Interface - Get all transaction configuration information
 ```
-Get the exchange currency pair configuration list
+Get the exchange currency pair configuration list, The data is updated every 10 seconds
 Speed ​​limit rule: 2 times / 1 second
 HTTP GET /api/exchange/v2/market/tradePair/list
 ```
@@ -332,7 +332,7 @@ Response:
 
 ### Public interface - Get the specified transaction pair configuration information
 ```
-Get the specified transaction pair configuration information
+Get the specified transaction pair configuration information, The data is updated every 10 seconds
 Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/tradePair/one
 ```
@@ -392,7 +392,7 @@ Response:
 
 ### Public interface - Get depth
 ```
-Get the exchange spot depth list
+Get the exchange spot depth list, The data is updated every 500mm
 Speed ​​limit rule: 6 times / 1 second
 HTTP GET /api/exchange/v2/market/orderBook?symbol=BTC/USDT
 ```
@@ -492,7 +492,7 @@ Response:
 
 ```
 
-Get the latest transaction price, buy one price, sell one price and 24 transaction volume of the exchange all ticker
+Get the latest transaction price, buy one price, sell one price and 24 transaction volume of the exchange all ticker, The data is updated every 10 seconds
 Speed ​​limit rule: 6 times / 1 second
 HTTP GET /api/exchange/v2/market/ticker/list
 ```
@@ -563,7 +563,7 @@ Response:
 ### Public interface - Get the specified ticker information
 
 ```
-Get the latest transaction price, buy one price, sell one price and 24 transaction volume of the exchange ticker
+Get the latest transaction price, buy one price, sell one price and 24 transaction volume of the exchange ticker,  The data is updated every 500mm
 Speed ​​limit rule: 6 times / 1 second
 HTTP GET /api/exchange/v2/market/ticker/one
 ```
@@ -623,7 +623,7 @@ Response:
 ### Public Interface - Check the latest transaction information
 
 ```
-Get the latest deal information on the spot of the exchange
+Get the latest deal information on the spot of the exchange, The data is updated every 10 seconds
 Speed ​​limit rule: 3 times / 1 second
 HTTP GET /api/exchange/v2/market/trades
 ```
@@ -704,7 +704,7 @@ Response:
 
 ### Public Interface-Get Kline Data Information
 ```
-Get Kline data information for different specified periods. The maximum amount of data for a single request is 200. If your chosen start / end time and time granularity result in exceeding the maximum amount of data for a single request, your request will only return 200 data. If you want to get enough granular data over a larger time frame, you need to make multiple requests with multiple start / end ranges.
+Get Kline data information for different specified periods. The maximum amount of data for a single request is 200. If your chosen start / end time and time granularity result in exceeding the maximum amount of data for a single request, your request will only return 200 data. If you want to get enough granular data over a larger time frame, you need to make multiple requests with multiple start / end ranges, The data is updated every 10 seconds
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/exchange/v2/market/instruments/candles
 ```
@@ -772,7 +772,7 @@ Response:
  
 ### Public Interface-Get Exchange Rate
 ```
-Get the exchange rate interface provided by the platform
+Get the exchange rate interface provided by the platform, The data is updated every 10 seconds
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/exchange/v2/market/rate/list
 
