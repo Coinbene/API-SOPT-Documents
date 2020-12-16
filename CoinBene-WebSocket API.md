@@ -26,7 +26,7 @@ Request header is small in size (around 2 bytes) during communication Since ther
 
 The connection will break automatically when a network problem occurs
 
-url: *wss://ws.coinbene.vip/stream/ws*
+url: *wss://ws.coinbene.com/stream/ws*
 
 ## Command Format
 
