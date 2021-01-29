@@ -1,6 +1,7 @@
 # coinbene-exchange-rest 接口说明
 
-* [coinbene-exchange-rest 接口说明](#coinbene-exchange-rest-接口说明)
+
+ * [coinbene-exchange-rest 接口说明](#coinbene-exchange-rest-接口说明)
       * [基本信息](#基本信息)
       * [访问限制](#访问限制)
       * [接口类型](#接口类型)
