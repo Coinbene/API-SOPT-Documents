@@ -1,6 +1,6 @@
 # coinbene-spot-rest 现货openapi rest接口说明
 
-[TOC]
+
 
 ## 基本信息
 
