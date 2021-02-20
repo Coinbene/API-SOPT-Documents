@@ -304,15 +304,15 @@ Example
 | Parameter    | Parameter Type | Description            |
 | ------------ | -------------- | ---------------------- |
 | symbol       | string         | trade pair name                   |
-| bestAskPrice | string         | Best ask price         |
-| bestAskSize  | string         | Best ask quantity      |
-| bestBidPrice | string         | Best bid price         |
-| bestBidSize  | string         | Best bid quantity      |
-| lastPrice    | string         | Last traded price      |
+| bestAskPrice | string         | best ask price         |
+| bestAskSize  | string         | best ask quantity      |
+| bestBidPrice | string         | best bid price         |
+| bestBidSize  | string         | best bid quantity      |
+| lastPrice    | string         | last traded price      |
 | high24h      | string         | 24h max trade price              |
 | low24h       | string         | 24 hour low price      |
 | volume24h    | string         | 24 hour trading volume |
-| timestamp    | string         | timestamp  |
+| timestamp    | string         | system timestamp  |
 
 #### Kline
 
