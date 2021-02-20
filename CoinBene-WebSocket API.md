@@ -303,16 +303,16 @@ Example
 
 | Parameter    | Parameter Type | Description            |
 | ------------ | -------------- | ---------------------- |
-| symbol       | string         | name                   |
+| symbol       | string         | trade pair name                   |
 | bestAskPrice | string         | Best ask price         |
 | bestAskSize  | string         | Best ask quantity      |
 | bestBidPrice | string         | Best bid price         |
 | bestBidSize  | string         | Best bid quantity      |
 | lastPrice    | string         | Last traded price      |
-| markPrice    | string         | Mark price             |
-| high24h      | string         | 24h最高价              |
+| high24h      | string         | 24h max trade price              |
 | low24h       | string         | 24 hour low price      |
 | volume24h    | string         | 24 hour trading volume |
+| timestamp    | string         | timestamp  |
 
 #### Kline
 
